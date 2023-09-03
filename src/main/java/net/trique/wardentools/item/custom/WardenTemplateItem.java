@@ -6,16 +6,12 @@
 package net.trique.wardentools.item.custom;
 
 import java.util.List;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.SmithingTemplateItem;
-import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
+
 
 public class WardenTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
