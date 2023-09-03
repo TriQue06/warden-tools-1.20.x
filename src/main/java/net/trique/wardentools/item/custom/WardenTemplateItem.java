@@ -7,8 +7,8 @@ package net.trique.wardentools.item.custom;
 
 import java.util.List;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
@@ -17,7 +17,7 @@ import net.minecraft.util.Util;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class WardenTemplateItem extends Item {
+public class WardenTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
     private static final Formatting DESCRIPTION_FORMATTING;
     private static final String TRANSLATION_KEY;
@@ -47,7 +47,7 @@ public class WardenTemplateItem extends Item {
     private final List<Identifier> emptyAdditionsSlotTextures;
 
     public WardenTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, List<Identifier> emptyBaseSlotTextures, List<Identifier> emptyAdditionsSlotTextures) {
-        super(new Item.Settings());
+        super(appliesToText, ingredientsText, titleText, baseSlotDescriptionText, additionsSlotDescriptionText, emptyBaseSlotTextures, emptyAdditionsSlotTextures);
         this.appliesToText = appliesToText;
         this.ingredientsText = ingredientsText;
         this.titleText = titleText;
@@ -110,15 +110,15 @@ public class WardenTemplateItem extends Item {
         WARDEN_UPGRADE_INGREDIENTS_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.warden_upgrade.ingredients"))).formatted(DESCRIPTION_FORMATTING);
         WARDEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.warden_upgrade.base_slot_description")));
         WARDEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT = Text.translatable(Util.createTranslationKey("item", new Identifier("smithing_template.warden_upgrade.additions_slot_description")));
-        EMPTY_ARMOR_SLOT_HELMET_TEXTURE = new Identifier("item/empty_armor_slot_helmet");
-        EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE = new Identifier("item/empty_armor_slot_chestplate");
-        EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE = new Identifier("item/empty_armor_slot_leggings");
-        EMPTY_ARMOR_SLOT_BOOTS_TEXTURE = new Identifier("item/empty_armor_slot_boots");
-        EMPTY_SLOT_HOE_TEXTURE = new Identifier("item/empty_slot_hoe");
-        EMPTY_SLOT_AXE_TEXTURE = new Identifier("item/empty_slot_axe");
-        EMPTY_SLOT_SWORD_TEXTURE = new Identifier("item/empty_slot_sword");
-        EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("item/empty_slot_shovel");
-        EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("item/empty_slot_pickaxe");
-        EMPTY_SLOT_INGOT_TEXTURE = new Identifier("item/empty_slot_ingot");
+        EMPTY_ARMOR_SLOT_HELMET_TEXTURE = new Identifier("minecraft:item/empty_armor_slot_helmet");
+        EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE = new Identifier("minecraft:item/empty_armor_slot_chestplate");
+        EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE = new Identifier("minecraft:item/empty_armor_slot_leggings");
+        EMPTY_ARMOR_SLOT_BOOTS_TEXTURE = new Identifier("minecraft:item/empty_armor_slot_boots");
+        EMPTY_SLOT_HOE_TEXTURE = new Identifier("minecraft:item/empty_slot_hoe");
+        EMPTY_SLOT_AXE_TEXTURE = new Identifier("minecraft:item/empty_slot_axe");
+        EMPTY_SLOT_SWORD_TEXTURE = new Identifier("minecraft:item/empty_slot_sword");
+        EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("minecraft:item/empty_slot_shovel");
+        EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("minecraft:item/empty_slot_pickaxe");
+        EMPTY_SLOT_INGOT_TEXTURE = new Identifier("minecraft:item/empty_slot_ingot");
     }
 }
