@@ -1,4 +1,4 @@
-package net.trique.wardentools.item;
+package net.trique.wardentools.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
@@ -8,7 +8,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageSources;
+import net.trique.wardentools.item.WardenItems;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -51,6 +52,12 @@ public class EchoStaff extends Item {
         return super.getAttributeModifiers(slot);
     }
 
+
+    @Override
+    public boolean canRepair(ItemStack stack, ItemStack ingredient) {
+        return ingredient.isOf(WardenItems.WARDEN_SOUL);
+    }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         user.setCurrentHand(hand);
@@ -82,8 +89,8 @@ public class EchoStaff extends Item {
             spawnSonicBoom(world, user);
 
             if(user instanceof PlayerEntity player) {
-                player.getItemCooldownManager().set(this, 320);
-                stack.damage(16, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
+                player.getItemCooldownManager().set(this, 100);
+                stack.damage(5, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
             }
         }
 
@@ -104,14 +111,14 @@ public class EchoStaff extends Item {
             Vec3d particlePos = source.add(normalized.multiply(particleIndex));
             ((ServerWorld) world).spawnParticles(ParticleTypes.SONIC_BOOM, particlePos.x, particlePos.y, particlePos.z, 1, 0.0, 0.0, 0.0, 0.0);
 
-            hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos(particlePos.getX(), particlePos.getY(), particlePos.getZ())).expand(1), it -> !(it instanceof WolfEntity)));
+            hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos((int) particlePos.getX(), (int) particlePos.getY(), (int) particlePos.getZ())).expand(1), it -> !(it instanceof WolfEntity)));
         }
 
         hit.remove(user);
 
         for (Entity hitTarget : hit) {
             if(hitTarget instanceof LivingEntity living) {
-                living.damage(DamageSource.sonicBoom(user), 16.0f);
+                living.damage(world.getDamageSources().sonicBoom(user), 18.0f);
                 double vertical = 0.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 double horizontal = 2.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 living.addVelocity(normalized.getX() * horizontal, normalized.getY() * vertical, normalized.getZ() * horizontal);
