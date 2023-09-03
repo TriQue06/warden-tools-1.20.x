@@ -53,7 +53,7 @@ public class WardenItems {
 
     public static final Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {
-        WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem((String)"warden_upgrade_smithing_template", (Item)WardenTemplateItem.createWardenUpgrade());
+        WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem("warden_upgrade_smithing_template", WardenTemplateItem.createWardenUpgrade());
     }
 
     private static Item registerItem (String name, Item item) {
