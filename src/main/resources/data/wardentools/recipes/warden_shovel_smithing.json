@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "wardentools:echo_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "result": {
+    "item": "wardentools:warden_shovel"
+  },
+  "template": {
+    "item": "minecraft:warden_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:netherite_ingot"
+      }
+    ],
+    "S": [
+      {
+        "item": "wardentools:warden_soul"
+      }
+    ],
+    "X": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "pattern": [
+    "X#X",
+    "#S#",
+    "X#X"
+  ],
+  "result": {
+    "count": 2,
+    "item": "wardentools:echo_ingot"
+  },
+  "show_notification": true
+}

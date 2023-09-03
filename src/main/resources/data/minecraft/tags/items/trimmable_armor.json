@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "wardentools:warden_helmet",
+    "wardentools:warden_chestplate",
+    "wardentools:warden_leggings",
+    "wardentools:warden_boots"
+  ]
+}

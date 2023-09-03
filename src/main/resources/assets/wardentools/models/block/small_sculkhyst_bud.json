@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "wardentools:block/small_sculkhyst_bud"
+  }
+}

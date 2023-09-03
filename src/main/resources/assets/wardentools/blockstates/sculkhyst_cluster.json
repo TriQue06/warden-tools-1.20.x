@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "wardentools:block/sculkhyst_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "wardentools:block/sculkhyst_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "wardentools:block/sculkhyst_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "wardentools:block/sculkhyst_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "wardentools:block/sculkhyst_cluster"
+    },
+    "facing=west": {
+      "model": "wardentools:block/sculkhyst_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

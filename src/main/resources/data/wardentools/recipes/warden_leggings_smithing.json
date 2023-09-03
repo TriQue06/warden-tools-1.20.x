@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "wardentools:echo_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "item": "wardentools:warden_leggings"
+  },
+  "template": {
+    "item": "minecraft:warden_upgrade_smithing_template"
+  }
+}

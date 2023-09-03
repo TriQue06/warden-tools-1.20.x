@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "wardentools:block/medium_sculkhyst_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "wardentools:block/medium_sculkhyst_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "wardentools:block/medium_sculkhyst_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "wardentools:block/medium_sculkhyst_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "wardentools:block/medium_sculkhyst_bud"
+    },
+    "facing=west": {
+      "model": "wardentools:block/medium_sculkhyst_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
