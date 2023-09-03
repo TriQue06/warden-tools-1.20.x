@@ -8,7 +8,6 @@ import net.minecraft.util.Identifier;
 import net.trique.wardentools.WardenTools;
 import net.trique.wardentools.item.custom.WardenTemplateItem;
 
-import static net.minecraft.item.Items.register;
 
 public class WardenItems {
 
@@ -53,7 +52,7 @@ public class WardenItems {
 
     public static final Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {
-        WARDEN_UPGRADE_SMITHING_TEMPLATE = register((String)"warden_upgrade_smithing_template", (Item)WardenTemplateItem.createWardenUpgrade());
+        WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem((String)"warden_upgrade_smithing_template", (Item)WardenTemplateItem.createWardenUpgrade());
     }
 
     private static Item registerItem (String name, Item item) {

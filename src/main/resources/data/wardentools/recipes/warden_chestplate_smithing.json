@@ -10,6 +10,6 @@
     "item": "wardentools:warden_chestplate"
   },
   "template": {
-    "item": "minecraft:warden_upgrade_smithing_template"
+    "item": "wardentools:warden_upgrade_smithing_template"
   }
 }
