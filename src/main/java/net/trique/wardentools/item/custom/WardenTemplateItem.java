@@ -6,16 +6,12 @@
 package net.trique.wardentools.item.custom;
 
 import java.util.List;
-import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.SmithingTemplateItem;
-import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
+
 
 public class WardenTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
@@ -38,9 +34,6 @@ public class WardenTemplateItem extends SmithingTemplateItem {
     private static final Identifier EMPTY_SLOT_SHOVEL_TEXTURE;
     private static final Identifier EMPTY_SLOT_PICKAXE_TEXTURE;
     private static final Identifier EMPTY_SLOT_INGOT_TEXTURE;
-    private final Text appliesToText;
-    private final Text ingredientsText;
-    private final Text titleText;
     private final Text baseSlotDescriptionText;
     private final Text additionsSlotDescriptionText;
     private final List<Identifier> emptyBaseSlotTextures;
@@ -48,9 +41,6 @@ public class WardenTemplateItem extends SmithingTemplateItem {
 
     public WardenTemplateItem(Text appliesToText, Text ingredientsText, Text titleText, Text baseSlotDescriptionText, Text additionsSlotDescriptionText, List<Identifier> emptyBaseSlotTextures, List<Identifier> emptyAdditionsSlotTextures) {
         super(appliesToText, ingredientsText, titleText, baseSlotDescriptionText, additionsSlotDescriptionText, emptyBaseSlotTextures, emptyAdditionsSlotTextures);
-        this.appliesToText = appliesToText;
-        this.ingredientsText = ingredientsText;
-        this.titleText = titleText;
         this.baseSlotDescriptionText = baseSlotDescriptionText;
         this.additionsSlotDescriptionText = additionsSlotDescriptionText;
         this.emptyBaseSlotTextures = emptyBaseSlotTextures;
@@ -67,16 +57,6 @@ public class WardenTemplateItem extends SmithingTemplateItem {
 
     private static List<Identifier> getWARDENUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
-    }
-
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        super.appendTooltip(stack, world, tooltip, context);
-        tooltip.add(this.titleText);
-        tooltip.add(ScreenTexts.EMPTY);
-        tooltip.add(APPLIES_TO_TEXT);
-        tooltip.add(ScreenTexts.space().append(this.appliesToText));
-        tooltip.add(INGREDIENTS_TEXT);
-        tooltip.add(ScreenTexts.space().append(this.ingredientsText));
     }
 
     public Text getBaseSlotDescription() {

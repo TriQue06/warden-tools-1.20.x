@@ -20,8 +20,7 @@ public class WardenItemGroup {
                         entries.add(WardenBlocks.MEDIUM_SCULKHYST_BUD);
                         entries.add(WardenBlocks.LARGE_SCULKHYST_BUD);
                         entries.add(WardenBlocks.SCULKHYST_CLUSTER);
-
-                        //entries.add(WardenItems.ECHO_STAFF);
+                        entries.add(WardenItems.ECHO_STAFF);
                         entries.add(WardenItems.WARDEN_SHOVEL);
                         entries.add(WardenItems.WARDEN_PICKAXE);
                         entries.add(WardenItems.WARDEN_AXE);

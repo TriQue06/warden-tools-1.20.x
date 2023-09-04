@@ -6,6 +6,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.trique.wardentools.WardenTools;
+import net.trique.wardentools.item.custom.EchoStaff;
 import net.trique.wardentools.item.custom.WardenTemplateItem;
 
 
@@ -41,8 +42,8 @@ public class WardenItems {
     public static final Item ECHO_INGOT = registerItem("echo_ingot",
             new Item(new FabricItemSettings().fireproof()));
 
-    //public static final Item ECHO_STAFF = registerItem("echo_staff",
-    //        new EchoStaff(new FabricItemSettings().fireproof().maxDamage(32)));
+    public static final Item ECHO_STAFF = registerItem("echo_staff",
+            new EchoStaff(new FabricItemSettings().fireproof().maxDamage(60)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new FabricItemSettings().fireproof().food(EchoApple.ECHO_APPLE)));
@@ -52,7 +53,7 @@ public class WardenItems {
 
     public static final Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {
-        WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem((String)"warden_upgrade_smithing_template", (Item)WardenTemplateItem.createWardenUpgrade());
+        WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem("warden_upgrade_smithing_template", WardenTemplateItem.createWardenUpgrade());
     }
 
     private static Item registerItem (String name, Item item) {
