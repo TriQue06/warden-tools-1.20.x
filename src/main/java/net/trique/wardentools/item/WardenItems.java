@@ -41,8 +41,8 @@ public class WardenItems {
     public static final Item ECHO_INGOT = registerItem("echo_ingot",
             new Item(new FabricItemSettings().fireproof()));
 
-    //public static final Item ECHO_STAFF = registerItem("echo_staff",
-    //        new EchoStaff(new FabricItemSettings().fireproof().maxDamage(32)));
+    public static final Item ECHO_STAFF = registerItem("echo_staff",
+            new EchoStaff(new FabricItemSettings().fireproof().maxDamage(32)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new FabricItemSettings().fireproof().food(EchoApple.ECHO_APPLE)));
