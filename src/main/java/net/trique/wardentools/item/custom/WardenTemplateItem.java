@@ -5,13 +5,13 @@
 
 package net.trique.wardentools.item.custom;
 
-import java.util.List;
 import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
 
+import java.util.List;
 
 public class WardenTemplateItem extends SmithingTemplateItem {
     private static final Formatting TITLE_FORMATTING;
@@ -48,14 +48,14 @@ public class WardenTemplateItem extends SmithingTemplateItem {
     }
 
     public static WardenTemplateItem createWardenUpgrade() {
-        return new WardenTemplateItem(WARDEN_UPGRADE_APPLIES_TO_TEXT, WARDEN_UPGRADE_INGREDIENTS_TEXT, WARDEN_UPGRADE_TEXT, WARDEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, WARDEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getWARDENUpgradeEmptyBaseSlotTextures(), getWARDENUpgradeEmptyAdditionsSlotTextures());
+        return new WardenTemplateItem(WARDEN_UPGRADE_APPLIES_TO_TEXT, WARDEN_UPGRADE_INGREDIENTS_TEXT, WARDEN_UPGRADE_TEXT, WARDEN_UPGRADE_BASE_SLOT_DESCRIPTION_TEXT, WARDEN_UPGRADE_ADDITIONS_SLOT_DESCRIPTION_TEXT, getWardenUpgradeEmptyBaseSlotTextures(), getWardenUpgradeEmptyAdditionsSlotTextures());
     }
 
-    private static List<Identifier> getWARDENUpgradeEmptyBaseSlotTextures() {
+    private static List<Identifier> getWardenUpgradeEmptyBaseSlotTextures() {
         return List.of(EMPTY_ARMOR_SLOT_HELMET_TEXTURE, EMPTY_SLOT_SWORD_TEXTURE, EMPTY_ARMOR_SLOT_CHESTPLATE_TEXTURE, EMPTY_SLOT_PICKAXE_TEXTURE, EMPTY_ARMOR_SLOT_LEGGINGS_TEXTURE, EMPTY_SLOT_AXE_TEXTURE, EMPTY_ARMOR_SLOT_BOOTS_TEXTURE, EMPTY_SLOT_HOE_TEXTURE, EMPTY_SLOT_SHOVEL_TEXTURE);
     }
 
-    private static List<Identifier> getWARDENUpgradeEmptyAdditionsSlotTextures() {
+    private static List<Identifier> getWardenUpgradeEmptyAdditionsSlotTextures() {
         return List.of(EMPTY_SLOT_INGOT_TEXTURE);
     }
 
