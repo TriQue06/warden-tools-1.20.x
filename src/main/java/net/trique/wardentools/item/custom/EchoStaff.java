@@ -37,8 +37,8 @@ public class EchoStaff extends Item {
         super(settings);
 
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", 1.0f, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", -1.0f, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", 6.0f, EntityAttributeModifier.Operation.ADDITION));
+        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", -2.4f, EntityAttributeModifier.Operation.ADDITION));
         this.attributeModifiers = builder.build();
     }
 
@@ -47,14 +47,12 @@ public class EchoStaff extends Item {
         if(slot == EquipmentSlot.MAINHAND) {
             return attributeModifiers;
         }
-
         return super.getAttributeModifiers(slot);
     }
 
-
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(WardenItems.WARDEN_SOUL);
+        return ingredient.isOf(WardenItems.ECHO_INGOT);
     }
 
     @Override
@@ -70,7 +68,7 @@ public class EchoStaff extends Item {
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 30;
+        return 24;
     }
 
     @Override
@@ -78,7 +76,7 @@ public class EchoStaff extends Item {
         super.usageTick(world, user, stack, remainingUseTicks);
 
         if(getMaxUseTime(stack) - remainingUseTicks == 1) {
-            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, SoundCategory.BLOCKS, 4.0f, 1.0f);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
         }
     }
 
@@ -88,18 +86,18 @@ public class EchoStaff extends Item {
             spawnSonicBoom(world, user);
 
             if(user instanceof PlayerEntity player) {
-                player.getItemCooldownManager().set(this, 100);
-                stack.damage(5, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
+                player.getItemCooldownManager().set(this, 80);
+                stack.damage(1, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
             }
         }
 
         return super.finishUsing(stack, world, user);
     }
     private void spawnSonicBoom(World world, LivingEntity user) {
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_BOOM, SoundCategory.BLOCKS, 8.0f, 1.0f);
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_BOOM, SoundCategory.BLOCKS, 5.0f, 1.0f);
 
         float heightOffset = 1.6f;
-        int distance = 16;
+        int distance = 20;
         Vec3d target = user.getPos().add(user.getRotationVector().multiply(distance));
         Vec3d source = user.getPos().add(0.0, heightOffset, 0.0);
         Vec3d offsetToTarget = target.subtract(source);
@@ -117,7 +115,7 @@ public class EchoStaff extends Item {
 
         for (Entity hitTarget : hit) {
             if(hitTarget instanceof LivingEntity living) {
-                living.damage(world.getDamageSources().sonicBoom(user), 18.0f);
+                living.damage(world.getDamageSources().sonicBoom(user), 16.0f);
                 double vertical = 0.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 double horizontal = 2.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 living.addVelocity(normalized.getX() * horizontal, normalized.getY() * vertical, normalized.getZ() * horizontal);

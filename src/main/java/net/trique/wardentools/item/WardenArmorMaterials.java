@@ -17,8 +17,8 @@ public enum WardenArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
-        map.put(Type.HELMET, 5);
-    }), 15, SoundEvents.ENTITY_WARDEN_SONIC_BOOM, 4.0F, 0.1F, () -> {
+        map.put(Type.HELMET, 4);
+    }), 15, SoundEvents.ENTITY_WARDEN_SONIC_BOOM, 3.0F, 0.1F, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{WardenItems.ECHO_INGOT});
     });
 
