@@ -594,7 +594,7 @@
         {
           "type": "minecraft:item",
           "weight": 2,
-          "name": "minecraft:warden_upgrade_smithing_template"
+          "name": "wardentools:warden_upgrade_smithing_template"
         }
       ]
     }
