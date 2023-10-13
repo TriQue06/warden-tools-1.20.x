@@ -3,6 +3,7 @@ package net.trique.wardentools.item;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
+import com.mojang.serialization.Codec;
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.recipe.Ingredient;

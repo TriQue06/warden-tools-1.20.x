@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package net.trique.wardentools.item.custom;
 
 import net.minecraft.item.SmithingTemplateItem;

@@ -6,7 +6,6 @@ import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
 import net.trique.wardentools.data.WardenLootTableGenerator;
 import net.trique.wardentools.data.WardenModelProvider;
-import net.trique.wardentools.data.WardenRecipeGenerator;
 import net.trique.wardentools.data.WardenWorldGenerator;
 import net.trique.wardentools.world.WardenConfiguredFeatures;
 import net.trique.wardentools.world.WardenPlacedFeatures;
@@ -16,7 +15,6 @@ public class WardenToolsDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(WardenLootTableGenerator::new);
-		pack.addProvider(WardenRecipeGenerator::new);
 		pack.addProvider(WardenModelProvider::new);
 		pack.addProvider(WardenWorldGenerator::new);
 	}
