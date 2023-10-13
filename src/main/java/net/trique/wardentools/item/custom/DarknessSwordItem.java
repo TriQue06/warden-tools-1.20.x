@@ -14,7 +14,7 @@ public class DarknessSwordItem extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 100, 0), attacker);
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 100, 0), attacker);
         return super.postHit(stack, target, attacker);
     }
 }
