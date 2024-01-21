@@ -3,11 +3,11 @@
 	"id": "wardentools",
 	"version": "${version}",
 	"name": "Warden Tools",
-	"description": "Warden Tools adds Warden gear and completely overhauls Ancient City loot.",
+	"description": "Warden Tools adds new Warden gear and Echo Staff!",
 	"authors": [
 		"TriQue"
 	],
-	"license": "what licence O_O",
+	"license": "MIT",
 	"icon": "assets/wardentools/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -28,6 +28,6 @@
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "Also try Mythic Upgrades!"
+		"another-mod": "*"
 	}
 }
