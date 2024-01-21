@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
 import net.minecraft.registry.RegistryKeys;
-import net.trique.wardentools.data.WardenLootTableGenerator;
 import net.trique.wardentools.data.WardenModelProvider;
 import net.trique.wardentools.data.WardenWorldGenerator;
 import net.trique.wardentools.world.WardenConfiguredFeatures;
@@ -14,7 +13,6 @@ public class WardenToolsDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
-		pack.addProvider(WardenLootTableGenerator::new);
 		pack.addProvider(WardenModelProvider::new);
 		pack.addProvider(WardenWorldGenerator::new);
 	}
