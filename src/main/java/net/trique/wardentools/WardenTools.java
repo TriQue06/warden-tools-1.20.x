@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.trique.wardentools.block.WardenBlocks;
 import net.trique.wardentools.item.WardenItemGroup;
 import net.trique.wardentools.item.WardenItems;
+import net.trique.wardentools.util.WardenLootTableModifiers;
 import net.trique.wardentools.world.gen.WardenWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,7 @@ public class WardenTools implements ModInitializer {
 		WardenItems.registerWardenItems();
 		WardenBlocks.registerWardenBlocks();
 		WardenWorldGeneration.generateModWorldGen();
+		WardenLootTableModifiers.modifyLootTables();
 		LOGGER.info("Warden Tools works properly! NECO, ANNENE SELAMLAR KARDESIM! <3");
 	}
 }

@@ -1,6 +1,6 @@
 {
   "item.wardentools.warden_upgrade_smithing_template": "Demirci Şablonu",
-  
+
   "item.wardentools.warden_soul": "Muhafızın Ruhu",
   "item.wardentools.echo_apple": "Yankılanan Elma",
   "item.wardentools.echo_ingot": "Yankı Külçesi",
@@ -9,14 +9,13 @@
   "item.wardentools.warden_chestplate": "Muhafız Göğüslük",
   "item.wardentools.warden_leggings": "Muhafız Tozluk",
   "item.wardentools.warden_boots": "Muhafız Çizme",
-  
+
   "item.wardentools.warden_sword": "Muhafız Kılıç",
   "item.wardentools.warden_axe": "Muhafız Balta",
   "item.wardentools.warden_pickaxe": "Muhafız Kazma",
   "item.wardentools.warden_shovel": "Muhafız Kürek",
   "item.wardentools.warden_hoe": "Muhafız Çapa",
   "item.wardentools.echo_staff": "Yankı Asası",
-
 
   "block.wardentools.sculkhyst_block": "Sculkist Bloğu",
   "block.wardentools.budding_sculkhyst": "Tomurcuklanan Sculkist",

@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.trique.wardentools.item.WardenItems;
 
 public class WardenModelProvider extends FabricModelProvider {
@@ -23,12 +24,13 @@ public class WardenModelProvider extends FabricModelProvider {
         itemModelGenerator.register(WardenItems.WARDEN_AXE, Models.HANDHELD);
         itemModelGenerator.register(WardenItems.WARDEN_HOE, Models.HANDHELD);
         itemModelGenerator.register(WardenItems.WARDEN_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(WardenItems.WARDEN_HELMET, Models.GENERATED);
-        itemModelGenerator.register(WardenItems.WARDEN_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(WardenItems.WARDEN_LEGGINGS, Models.GENERATED);
-        itemModelGenerator.register(WardenItems.WARDEN_BOOTS, Models.GENERATED);
         itemModelGenerator.register(WardenItems.ECHO_INGOT, Models.GENERATED);
         itemModelGenerator.register(WardenItems.ECHO_APPLE, Models.GENERATED);
         itemModelGenerator.register(WardenItems.WARDEN_SOUL, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(((ArmorItem) WardenItems.WARDEN_HELMET));
+        itemModelGenerator.registerArmor(((ArmorItem) WardenItems.WARDEN_CHESTPLATE));
+        itemModelGenerator.registerArmor(((ArmorItem) WardenItems.WARDEN_LEGGINGS));
+        itemModelGenerator.registerArmor(((ArmorItem) WardenItems.WARDEN_BOOTS));
     }
 }
