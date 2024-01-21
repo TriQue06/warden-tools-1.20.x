@@ -42,7 +42,7 @@ public class WardenItems {
             new Item(new FabricItemSettings().fireproof()));
 
     public static final Item ECHO_STAFF = registerItem("echo_staff",
-            new EchoStaff(new FabricItemSettings().fireproof().maxDamage(35)));
+            new EchoStaff(new FabricItemSettings().fireproof().maxDamage(50)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new FabricItemSettings().fireproof().food(EchoApple.ECHO_APPLE)));

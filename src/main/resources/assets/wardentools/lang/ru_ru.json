@@ -1,6 +1,6 @@
 {
   "item.wardentools.warden_upgrade_smithing_template": "Кузнечный шаблон",
-  
+
   "item.wardentools.warden_soul": "Душа Хранителя",
   "item.wardentools.echo_apple": "Эхо-яблоко",
   "item.wardentools.echo_ingot": "Эхо-слиток",
@@ -9,14 +9,13 @@
   "item.wardentools.warden_chestplate": "Нагрудник Хранителя",
   "item.wardentools.warden_leggings": "Поножи Хранителя",
   "item.wardentools.warden_boots": "Ботинки Хранителя",
-  
+
   "item.wardentools.warden_sword": "Меч Хранителя",
   "item.wardentools.warden_axe": "Топор Хранителя",
   "item.wardentools.warden_pickaxe": "Кирка Хранителя",
   "item.wardentools.warden_shovel": "Лопата Хранителя",
   "item.wardentools.warden_hoe": "Мотыга Хранителя",
   "item.wardentools.echo_staff": "Эхо-посох",
-
 
   "block.wardentools.sculkhyst_block": "Блок скалкциста",
   "block.wardentools.budding_sculkhyst": "Растущий скалкцист",
