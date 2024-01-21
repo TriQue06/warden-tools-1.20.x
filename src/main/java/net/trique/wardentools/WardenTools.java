@@ -19,6 +19,6 @@ public class WardenTools implements ModInitializer {
 		WardenItems.registerWardenItems();
 		WardenBlocks.registerWardenBlocks();
 		WardenWorldGeneration.generateModWorldGen();
-		LOGGER.info("Warden Tools works properly! NECO ANNENE SELAMLAR KARŞİM <3!");
+		LOGGER.info("Warden Tools works properly! NECO, ANNENE SELAMLAR KARDESIM! <3");
 	}
 }
