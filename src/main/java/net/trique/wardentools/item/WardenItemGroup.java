@@ -35,6 +35,5 @@ public class WardenItemGroup {
                         entries.add(WardenItems.ECHO_APPLE);
                         entries.add(WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE);
                     }).build());
-
     public static void registerWardenGroups() {}
 }
