@@ -1,0 +1,32 @@
+{
+  "item.wardentools.warden_upgrade_smithing_template": "鍛冶型",
+
+  "item.wardentools.warden_soul": "ウォーデンの魂",
+  "item.wardentools.echo_apple": "残響のリンゴ",
+  "item.wardentools.echo_ingot": "残響インゴット",
+
+  "item.wardentools.warden_helmet": "ウォーデンのヘルメット",
+  "item.wardentools.warden_chestplate": "ウォーデンのチェストプレート",
+  "item.wardentools.warden_leggings": "ウォーデンのレギンス",
+  "item.wardentools.warden_boots": "ウォーデンのブーツ",
+
+  "item.wardentools.warden_sword": "ウォーデンの剣",
+  "item.wardentools.warden_axe": "ウォーデンの斧",
+  "item.wardentools.warden_pickaxe": "ウォーデンのツルハシ",
+  "item.wardentools.warden_shovel": "ウォーデンのシャベル",
+  "item.wardentools.warden_hoe": "ウォーデンのクワ",
+  "item.wardentools.echo_staff": "残響の杖",
+
+  "block.wardentools.sculkhyst_block": "スカルクジストブロック",
+  "block.wardentools.budding_sculkhyst": "芽生えたスカルクジスト",
+  "block.wardentools.sculkhyst_cluster": "スカルクジストの塊",
+  "block.wardentools.large_sculkhyst_bud": "大きなスカルクジストの芽",
+  "block.wardentools.medium_sculkhyst_bud": "中くらいのスカルクジストの芽",
+  "block.wardentools.small_sculkhyst_bud": "小さなスカルクジストの芽",
+
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "残響インゴットを置いてください",
+  "item.minecraft.smithing_template.warden_upgrade.applies_to": "ネザライトの装備品",
+  "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "ネザライト製の防具、武器、道具を置いてください",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "残響インゴット",
+  "upgrade.minecraft.warden_upgrade": "ウォーデン強化"
+}
