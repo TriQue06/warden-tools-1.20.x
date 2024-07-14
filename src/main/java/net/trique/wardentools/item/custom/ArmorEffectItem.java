@@ -9,14 +9,15 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
 
 public class ArmorEffectItem extends ArmorItem {
     private static final int effectDuration = 400;
     private static final int amplifier = 0;
-    private final StatusEffect effect;
+    private final RegistryEntry<StatusEffect> effect;
 
-    public ArmorEffectItem(ArmorMaterial material, Type type, Settings settings, StatusEffect effect) {
+    public ArmorEffectItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings, RegistryEntry<StatusEffect> effect) {
         super(material, type, settings);
         this.effect = effect;
     }
@@ -44,7 +45,7 @@ public class ArmorEffectItem extends ArmorItem {
     }
 
     private void evaluateArmorEffects(PlayerEntity player) {
-        if (hasCorrectArmorOn(this.getMaterial(), player)) {
+        if (hasCorrectArmorOn(material.value(), player)) {
             addStatusEffect(player);
         }
     }
@@ -62,10 +63,10 @@ public class ArmorEffectItem extends ArmorItem {
                 || !(helmet instanceof ArmorItem)) {
             return false;
         } else {
-            return ((ArmorItem)helmet).getMaterial() == material
-                    && ((ArmorItem)chestplate).getMaterial() == material
-                    && ((ArmorItem)leggings).getMaterial() == material
-                    && ((ArmorItem)boots).getMaterial() == material;
+            return ((ArmorItem)helmet).getMaterial().value() == material
+                    && ((ArmorItem)chestplate).getMaterial().value() == material
+                    && ((ArmorItem)leggings).getMaterial().value() == material
+                    && ((ArmorItem)boots).getMaterial().value() == material;
         }
     }
 

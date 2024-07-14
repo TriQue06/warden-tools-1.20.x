@@ -1,88 +1,45 @@
 package net.trique.wardentools.item;
 
 import java.util.EnumMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Supplier;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.Lazy;
 import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
+import net.trique.wardentools.WardenTools;
 
-public enum WardenArmorMaterials implements StringIdentifiable, ArmorMaterial {
-    WARDEN("warden", 48, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
-        map.put(Type.BOOTS, 4);
-        map.put(Type.LEGGINGS, 7);
-        map.put(Type.CHESTPLATE, 9);
-        map.put(Type.HELMET, 4);
-    }), 15, SoundEvents.ENTITY_WARDEN_SONIC_BOOM, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{WardenItems.ECHO_INGOT});
-    });
+public class WardenArmorMaterials{
+    public static void initialize(){}
 
-    public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
-    private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
-        map.put(Type.BOOTS, 13);
-        map.put(Type.LEGGINGS, 15);
-        map.put(Type.CHESTPLATE, 16);
-        map.put(Type.HELMET, 11);
-    });
-    private final String name;
-    private final int durabilityMultiplier;
-    private final EnumMap<Type, Integer> protectionAmounts;
-    private final int enchantability;
-    private final SoundEvent equipSound;
-    private final float toughness;
-    private final float knockbackResistance;
-    private final Lazy<Ingredient> repairIngredientSupplier;
+    public static RegistryEntry<ArmorMaterial> registerMaterial(String id, Map<Type, Integer> defensePoints, int enchantability, RegistryEntry<SoundEvent> equipSound, Supplier<Ingredient> repairIngredientSupplier, float toughness, float knockbackResistance, boolean dyeable){
+        List<ArmorMaterial.Layer> layers = List.of(
+                new ArmorMaterial.Layer(Identifier.of(WardenTools.MOD_ID,id),"",dyeable)
+        );
 
-    private WardenArmorMaterials(String name, int durabilityMultiplier, EnumMap protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier repairIngredientSupplier) {
-        this.name = name;
-        this.durabilityMultiplier = durabilityMultiplier;
-        this.protectionAmounts = protectionAmounts;
-        this.enchantability = enchantability;
-        this.equipSound = equipSound;
-        this.toughness = toughness;
-        this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = new Lazy(repairIngredientSupplier);
+        ArmorMaterial material = new ArmorMaterial(defensePoints, enchantability, equipSound, repairIngredientSupplier, layers, toughness, knockbackResistance);
+        material = Registry.register(Registries.ARMOR_MATERIAL, Identifier.of(WardenTools.MOD_ID, id),material);
+        return RegistryEntry.of(material);
     }
 
-    public int getDurability(Type type) {
-        return (Integer)BASE_DURABILITY.get(type) * this.durabilityMultiplier;
-    }
+    public static final RegistryEntry<ArmorMaterial> WARDEN = registerMaterial("warden",
+            Map.of(
+                    Type.HELMET,4,
+                    Type.CHESTPLATE, 7,
+                    Type.LEGGINGS, 9,
+                    Type.BOOTS,4
+            ),15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
+            () -> Ingredient.ofItems(WardenItems.ECHO_INGOT),3.0f,0.1f,false);
 
-    public int getProtection(Type type) {
-        return (Integer)this.protectionAmounts.get(type);
-    }
-
-    public int getEnchantability() {
-        return this.enchantability;
-    }
-
-    public SoundEvent getEquipSound() {
-        return this.equipSound;
-    }
-
-    public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredientSupplier.get();
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public float getToughness() {
-        return this.toughness;
-    }
-
-    public float getKnockbackResistance() {
-        return this.knockbackResistance;
-    }
-
-    public String asString() {
-        return this.name;
-    }
 }
