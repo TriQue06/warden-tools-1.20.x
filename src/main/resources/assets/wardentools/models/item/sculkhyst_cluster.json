@@ -1,0 +1,6 @@
+{
+  "parent": "item/amethyst_cluster",
+  "textures": {
+    "layer0": "wardentools:block/sculkhyst_cluster"
+  }
+}
