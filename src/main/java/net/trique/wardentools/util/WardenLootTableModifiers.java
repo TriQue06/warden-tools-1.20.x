@@ -1,6 +1,6 @@
 package net.trique.wardentools.util;
 
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
@@ -12,11 +12,11 @@ import net.trique.wardentools.item.WardenItems;
 
 public class WardenLootTableModifiers {
     private static final Identifier ANCIENT_CITY_ID =
-            new Identifier("minecraft", "chests/ancient_city");
+            Identifier.of("minecraft", "chests/ancient_city");
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            if(ANCIENT_CITY_ID.equals(id)) {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            if(ANCIENT_CITY_ID.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.05f))
@@ -25,7 +25,7 @@ public class WardenLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
-            if(ANCIENT_CITY_ID.equals(id)) {
+            if(ANCIENT_CITY_ID.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.25f))

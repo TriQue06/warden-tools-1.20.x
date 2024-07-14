@@ -1,6 +1,5 @@
 package net.trique.wardentools.block;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -34,12 +33,12 @@ public class WardenBlocks {
     
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(WardenTools.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, Identifier.of(WardenTools.MOD_ID, name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, new Identifier(WardenTools.MOD_ID, name),
-                new BlockItem(block, new FabricItemSettings()));
+        Item item = Registry.register(Registries.ITEM, Identifier.of(WardenTools.MOD_ID, name),
+                new BlockItem(block, new Item.Settings()));
         return item;
     }
 

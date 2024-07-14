@@ -2,12 +2,16 @@ package net.trique.wardentools.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.util.Identifier;
 import net.trique.wardentools.item.WardenItems;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -31,23 +35,14 @@ import java.util.Set;
 
 public class EchoStaff extends Item {
 
-    private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
-
     public EchoStaff(Settings settings) {
-        super(settings);
+        super(settings.attributeModifiers(createAttributeModifiers()));
 
-        ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
-        builder.put(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(ATTACK_DAMAGE_MODIFIER_ID, "Weapon modifier", 3.0f, EntityAttributeModifier.Operation.ADDITION));
-        builder.put(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(ATTACK_SPEED_MODIFIER_ID, "Weapon modifier", 0f, EntityAttributeModifier.Operation.ADDITION));
-        this.attributeModifiers = builder.build();
     }
-
-    @Override
-    public Multimap<EntityAttribute, EntityAttributeModifier> getAttributeModifiers(EquipmentSlot slot) {
-        if(slot == EquipmentSlot.MAINHAND) {
-            return attributeModifiers;
-        }
-        return super.getAttributeModifiers(slot);
+    public static AttributeModifiersComponent createAttributeModifiers() {
+        return AttributeModifiersComponent.builder()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, new EntityAttributeModifier(BASE_ATTACK_DAMAGE_MODIFIER_ID, 3.0f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, new EntityAttributeModifier(BASE_ATTACK_SPEED_MODIFIER_ID, 0f, EntityAttributeModifier.Operation.ADD_VALUE), AttributeModifierSlot.MAINHAND).build();
     }
 
     @Override
@@ -67,7 +62,7 @@ public class EchoStaff extends Item {
     }
 
     @Override
-    public int getMaxUseTime(ItemStack stack) {
+    public int getMaxUseTime(ItemStack stack, LivingEntity usr) {
         return 25;
     }
 
@@ -75,7 +70,7 @@ public class EchoStaff extends Item {
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
         super.usageTick(world, user, stack, remainingUseTicks);
 
-        if(getMaxUseTime(stack) - remainingUseTicks == 1) {
+        if(getMaxUseTime(stack, user) - remainingUseTicks == 1) {
             world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
         }
     }
@@ -87,7 +82,7 @@ public class EchoStaff extends Item {
 
             if(user instanceof PlayerEntity player) {
                 player.getItemCooldownManager().set(this, 80);
-                stack.damage(1, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
+                stack.damage(1, user, EquipmentSlot.MAINHAND);
             }
         }
 
