@@ -1,11 +1,14 @@
 package net.trique.wardentools.item;
 
+import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
 
 public class EchoApple {
-    public static final FoodComponent ECHO_APPLE = (new FoodComponent.Builder()).hunger(5).saturationModifier(1.2F).
+    public static final FoodComponent ECHO_APPLE = new FoodComponent.Builder()
+            .snack()
+            .nutrition(5)
+            .saturationModifier(1.2F).
         statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 300, 0), 1.0F).
         statusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 1200, 0), 0.5F).
 
