@@ -3,10 +3,10 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "minecraft:cobbled_deepslate"
     },
     "C": {
-      "item": "minecraft:cobbled_deepslate"
+      "item": "minecraft:diamond"
     },
     "S": {
       "item": "wardentools:warden_upgrade_smithing_template"

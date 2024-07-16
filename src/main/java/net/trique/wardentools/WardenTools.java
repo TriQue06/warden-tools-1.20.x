@@ -20,6 +20,7 @@ public class WardenTools implements ModInitializer {
 		WardenItems.registerWardenItems();
 		WardenBlocks.registerWardenBlocks();
 		WardenWorldGeneration.generateWardenWorldGen();
+		WardenLootTableModifiers.replaceLootTables();
 		WardenLootTableModifiers.modifyLootTables();
 		LOGGER.info("Warden Tools works properly! NECO, ANNENE SELAMLAR KARDESIM! <3");
 	}
