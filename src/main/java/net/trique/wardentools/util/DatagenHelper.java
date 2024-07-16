@@ -9,12 +9,14 @@ import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.util.Identifier;
+import net.trique.wardentools.WardenTools;
 import net.trique.wardentools.item.WardenItems;
 
 public class DatagenHelper {
     public static void offerCustomUpgradeRecipe(RecipeExporter exporter, Item template, Item input, Item itemMaterialUpgrade, RecipeCategory category, Item result) {
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(template), Ingredient.ofItems(input), Ingredient.ofItems(itemMaterialUpgrade), category, result).
-                criterion(RecipeProvider.hasItem(itemMaterialUpgrade), RecipeProvider.conditionsFromItem(itemMaterialUpgrade)).offerTo(exporter, RecipeProvider.getItemPath(result) + "_smithing");
+                criterion(RecipeProvider.hasItem(itemMaterialUpgrade), RecipeProvider.conditionsFromItem(itemMaterialUpgrade)).offerTo(exporter, Identifier.of(WardenTools.MOD_ID,RecipeProvider.getItemPath(result)+ "_smithing")  );
     }
 
     public static void offerCustomSmithingTemplateCopyingRecipe(RecipeExporter exporter, ItemConvertible template, ItemConvertible duplicationMaterial, ItemConvertible resource) {
