@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:warden_pickaxe_smithing"
+      "wardentools:warden_pickaxe_smithing"
     ]
   }
 }

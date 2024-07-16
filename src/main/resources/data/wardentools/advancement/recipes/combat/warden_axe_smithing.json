@@ -1,6 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:warden_axe_smithing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
     "has_echo_ingot": {
       "conditions": {
         "items": [
@@ -10,12 +16,6 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:warden_axe_smithing"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:warden_axe_smithing"
+      "wardentools:warden_axe_smithing"
     ]
   }
 }

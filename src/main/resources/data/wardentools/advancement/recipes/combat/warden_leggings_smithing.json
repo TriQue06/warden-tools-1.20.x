@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:warden_leggings_smithing"
+      "wardentools:warden_leggings_smithing"
     ]
   }
 }

@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:warden_sword_smithing"
+      "wardentools:warden_sword_smithing"
     ]
   }
 }
