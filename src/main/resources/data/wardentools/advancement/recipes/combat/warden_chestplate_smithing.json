@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:warden_chestplate_smithing"
+        "recipe": "wardentools:warden_chestplate_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:warden_boots_smithing"
+        "recipe": "wardentools:warden_boots_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

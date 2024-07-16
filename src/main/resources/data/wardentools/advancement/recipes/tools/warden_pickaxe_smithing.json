@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:warden_pickaxe_smithing"
+        "recipe": "wardentools:warden_pickaxe_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
