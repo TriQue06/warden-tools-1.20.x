@@ -64,15 +64,6 @@ public class WardenLootTableModifiers {
 
                 LootPool.Builder SoulLootBuild = LootPool.builder();
                 LootPool.Builder ShardLootBuild = LootPool.builder();
-//                LootPool.Builder BlockLootBuild = LootPool.builder();
-//                BlockLootBuild
-//                        .rolls(ConstantLootNumberProvider.create(1f))
-//                        .with(ItemEntry.builder(Items.SCULK_CATALYST)
-//                                .conditionally(KilledByPlayerLootCondition.builder())
-//                        )
-//                        .with(ItemEntry.builder(WardenBlocks.SCULKHYST_BLOCK)
-//                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-//                                .conditionally(KilledByPlayerLootCondition.builder()));
                 SoulLootBuild
                         .rolls(ConstantLootNumberProvider.create(1f))
                         .with(ItemEntry.builder(WardenItems.WARDEN_SOUL)
