@@ -2,22 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "S": {
+    "e": {
+      "item": "wardentools:echo_ingot"
+    },
+    "s": {
       "item": "wardentools:warden_soul"
     },
-    "#": {
+    "w": {
       "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "wardentools:echo_ingot"
     }
   },
   "pattern": [
-    " S ",
-    " X ",
-    " # "
+    "s",
+    "w",
+    "e"
   ],
   "result": {
-    "item": "wardentools:echo_staff"
+    "count": 1,
+    "id": "wardentools:echo_staff"
   }
 }

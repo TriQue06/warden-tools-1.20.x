@@ -2,19 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:echo_shard"
-    },
-    "X": {
+    "a": {
       "item": "minecraft:apple"
+    },
+    "e": {
+      "item": "minecraft:echo_shard"
     }
   },
   "pattern": [
-    " # ",
-    "#X#",
-    " # "
+    " e ",
+    "eae",
+    " e "
   ],
   "result": {
-    "item": "wardentools:echo_apple"
+    "count": 1,
+    "id": "wardentools:echo_apple"
   }
 }

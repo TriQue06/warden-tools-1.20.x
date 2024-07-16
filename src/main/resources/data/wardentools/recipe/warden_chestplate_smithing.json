@@ -4,10 +4,11 @@
     "item": "wardentools:echo_ingot"
   },
   "base": {
-    "item": "minecraft:netherite_boots"
+    "item": "minecraft:netherite_chestplate"
   },
   "result": {
-    "item": "wardentools:warden_boots"
+    "count": 1,
+    "id": "wardentools:warden_chestplate"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wardentools:echo_staff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warden_soul": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wardentools:warden_soul"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_warden_soul"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wardentools:echo_staff"
+    ]
+  }
+}

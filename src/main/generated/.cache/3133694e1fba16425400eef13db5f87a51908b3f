@@ -1,4 +1,4 @@
-// 1.21	2024-07-14T20:49:07.6918124	Warden Tools/Model Definitions
+// 1.21	2024-07-16T16:34:59.8506952	Warden Tools/Model Definitions
 c1abbdcfc4a719a510ad9e07e087cca94edc513c assets\wardentools\models\item\warden_chestplate_diamond_trim.json
 c8bf7bd45a625b3dd079a39708d9f56008be9ad5 assets\wardentools\models\item\warden_leggings_quartz_trim.json
 50197b04ea3903911408053c2bd875c19e99d566 assets\wardentools\models\item\warden_leggings_redstone_trim.json
@@ -16,8 +16,8 @@ c2910d5b3b743047db9a0d61112e89062c8ecde2 assets\wardentools\models\item\warden_h
 782208c32ac7560507cfd08c47b9936e4852e453 assets\wardentools\models\item\warden_leggings_lapis_trim.json
 4f468a50a311b875396436aff295f4576aa51fc2 assets\wardentools\models\item\warden_chestplate_gold_trim.json
 8af986af224c814716a2f0eba1ac4e8eed5c9d34 assets\wardentools\models\item\warden_chestplate_emerald_trim.json
-33acb82c49220b3c1e6e2f391043a39b19220a52 assets\wardentools\models\item\warden_chestplate_amethyst_trim.json
 df11ce65d4777e681f75d32325834d1820068f99 assets\wardentools\models\item\echo_apple.json
+33acb82c49220b3c1e6e2f391043a39b19220a52 assets\wardentools\models\item\warden_chestplate_amethyst_trim.json
 0529d138303d28abe2ef67856fc521ed31235c58 assets\wardentools\models\item\warden_boots_netherite_trim.json
 a36a237f885b1fb28dcaa465a21908e7633f3acf assets\wardentools\models\item\warden_hoe.json
 e81ed7cb69b150039016566f507fb0d1c7686f6a assets\wardentools\models\item\warden_boots_amethyst_trim.json

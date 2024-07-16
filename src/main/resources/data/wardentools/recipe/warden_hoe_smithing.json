@@ -7,7 +7,8 @@
     "item": "minecraft:netherite_hoe"
   },
   "result": {
-    "item": "wardentools:warden_hoe"
+    "count": 1,
+    "id": "wardentools:warden_hoe"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"

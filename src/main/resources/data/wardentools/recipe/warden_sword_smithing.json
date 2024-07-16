@@ -4,10 +4,11 @@
     "item": "wardentools:echo_ingot"
   },
   "base": {
-    "item": "minecraft:netherite_shovel"
+    "item": "minecraft:netherite_sword"
   },
   "result": {
-    "item": "wardentools:warden_shovel"
+    "count": 1,
+    "id": "wardentools:warden_sword"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"

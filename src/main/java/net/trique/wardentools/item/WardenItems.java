@@ -28,16 +28,16 @@ public class WardenItems {
             new DarknessSwordItem(WardenToolMaterials.WARDEN, new Item.Settings().fireproof().attributeModifiers(DarknessSwordItem.createAttributeModifiers(WardenToolMaterials.WARDEN,3, -2.4f))));
 
     public static final Item WARDEN_HELMET = registerItem("warden_helmet",
-            new ArmorEffectItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.HELMET, new Item.Settings().fireproof(), StatusEffects.RESISTANCE));
+            new ArmorEffectItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.HELMET, new Item.Settings().fireproof().maxDamage(net.minecraft.item.ArmorItem.Type.HELMET.getMaxDamage(48)), StatusEffects.RESISTANCE));
 
     public static final Item WARDEN_CHESTPLATE = registerItem("warden_chestplate",
-            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof()));
+            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.CHESTPLATE, new Item.Settings().fireproof().maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(48))));
 
     public static final Item WARDEN_LEGGINGS = registerItem("warden_leggings",
-            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof()));
+            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.LEGGINGS, new Item.Settings().fireproof().maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(48))));
 
     public static final Item WARDEN_BOOTS = registerItem("warden_boots",
-            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.BOOTS, new Item.Settings().fireproof()));
+            new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.BOOTS, new Item.Settings().fireproof().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(48))));
 
     public static final Item ECHO_INGOT = registerItem("echo_ingot",
             new Item(new Item.Settings().fireproof()));

@@ -4,10 +4,11 @@
     "item": "wardentools:echo_ingot"
   },
   "base": {
-    "item": "minecraft:netherite_leggings"
+    "item": "minecraft:netherite_axe"
   },
   "result": {
-    "item": "wardentools:warden_leggings"
+    "count": 1,
+    "id": "wardentools:warden_axe"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"
