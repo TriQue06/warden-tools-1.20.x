@@ -1,11 +1,9 @@
 package net.trique.wardentools.item;
 
-import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import com.mojang.serialization.Codec;
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.recipe.Ingredient;
@@ -15,9 +13,6 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Lazy;
-import net.minecraft.util.StringIdentifiable;
-import net.minecraft.util.Util;
 import net.trique.wardentools.WardenTools;
 
 public class WardenArmorMaterials{

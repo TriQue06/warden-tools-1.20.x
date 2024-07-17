@@ -1,7 +1,5 @@
 package net.trique.wardentools.item;
 
-
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;

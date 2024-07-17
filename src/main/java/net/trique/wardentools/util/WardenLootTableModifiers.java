@@ -19,7 +19,9 @@ import net.trique.wardentools.item.WardenItems;
 
 public class WardenLootTableModifiers {
     private static final Identifier ANCIENT_CITY_ID = LootTables.ANCIENT_CITY_CHEST.getValue();
+    // ID for modifying vanilla loot table
     private static final Identifier WARDEN_LOOT_TABLE_ID = EntityType.WARDEN.getLootTableId().getValue();
+    // Key for replacing vanilla loot table
     private static final RegistryKey<LootTable> WARDEN_LOOT_TABLE_KEY = EntityType.WARDEN.getLootTableId();
 
     public static void replaceLootTables(){
