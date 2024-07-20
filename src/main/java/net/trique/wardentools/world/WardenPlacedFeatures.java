@@ -18,7 +18,7 @@ public class WardenPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SCULKHYST_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(WardenConfiguredFeatures.SCULKHYST_GEODE_KEY),
-                RarityFilterPlacementModifier.of(200), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
+                RarityFilterPlacementModifier.of(12), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
                         YOffset.aboveBottom(128)), BiomePlacementModifier.of());
     }
 
