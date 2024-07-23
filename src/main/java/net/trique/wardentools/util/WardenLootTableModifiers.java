@@ -51,7 +51,7 @@ public class WardenLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
-                                .conditionally(RandomChanceLootCondition.builder(0.6f))
+                                .conditionally(RandomChanceLootCondition.builder(0.05f))
                         );
                 LootPool.Builder ApplePoolBuilder = LootPool.builder()
                         .with(ItemEntry.builder(WardenItems.ECHO_APPLE)
