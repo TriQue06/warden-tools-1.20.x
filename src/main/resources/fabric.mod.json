@@ -3,9 +3,13 @@
 	"id": "wardentools",
 	"version": "${version}",
 	"name": "Warden Tools",
-	"description": "Warden Tools adds new Warden gear and Echo Staff!",
+	"description": "Warden Tools adds new Warden set and Echo Staff!",
 	"authors": [
 		"TriQue"
+	],
+	"contributors": [
+		"Zyablik",
+		"CyberSteve777"
 	],
 	"license": "MIT",
 	"icon": "assets/wardentools/icon.png",

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "wardentools:echo_ingot"
+    "item": "wardentools:sculk_shell"
   },
   "base": {
     "item": "minecraft:netherite_chestplate"

@@ -6,6 +6,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.trique.wardentools.WardenTools;
 import net.trique.wardentools.item.custom.*;
 
@@ -38,17 +39,20 @@ public class WardenItems {
     public static final Item WARDEN_BOOTS = registerItem("warden_boots",
             new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.BOOTS, new FabricItemSettings().fireproof()));
 
-    public static final Item ECHO_INGOT = registerItem("echo_ingot",
-            new Item(new FabricItemSettings().fireproof()));
+    public static final Item SCULK_SHELL = registerItem("sculk_shell",
+            new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.SCULK_SHELL)));
 
     public static final Item ECHO_STAFF = registerItem("echo_staff",
-            new EchoStaff(new FabricItemSettings().fireproof().maxDamage(35)));
+            new EchoStaff(new FabricItemSettings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
-            new Item(new FabricItemSettings().fireproof().food(EchoApple.ECHO_APPLE)));
+            new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.ECHO_APPLE)));
+
+    public static final Item TEST_STAFF = registerItem("test_staff",
+            new TestStaff(new FabricItemSettings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
     public static final Item WARDEN_SOUL = registerItem("warden_soul",
-            new Item(new FabricItemSettings().fireproof()));
+            new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
 
     public static final Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {

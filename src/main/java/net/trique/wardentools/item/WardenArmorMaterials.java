@@ -19,7 +19,7 @@ public enum WardenArmorMaterials implements StringIdentifiable, ArmorMaterial {
         map.put(Type.CHESTPLATE, 9);
         map.put(Type.HELMET, 4);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{WardenItems.ECHO_INGOT});
+        return Ingredient.ofItems(new ItemConvertible[]{WardenItems.SCULK_SHELL});
     });
 
     public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);

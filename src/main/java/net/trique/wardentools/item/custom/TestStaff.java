@@ -8,13 +8,11 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.item.Items;
-import net.minecraft.text.LiteralTextContent;
-import net.trique.wardentools.item.WardenItems;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -31,11 +29,11 @@ import net.minecraft.world.World;
 import java.util.HashSet;
 import java.util.Set;
 
-public class EchoStaff extends Item {
+public class TestStaff extends Item {
 
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    public EchoStaff(Settings settings) {
+    public TestStaff(Settings settings) {
         super(settings);
 
         ImmutableMultimap.Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
@@ -105,12 +103,14 @@ public class EchoStaff extends Item {
         super.usageTick(world, user, stack, remainingUseTicks);
 
         if(getMaxUseTime(stack) - remainingUseTicks == 1) {
-            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_RESPAWN_ANCHOR_CHARGE, SoundCategory.BLOCKS, 3.0f, 1.0f);
         }
     }
 
     private void spawnSonicBoom(World world, LivingEntity user) {
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_BOOM, SoundCategory.BLOCKS, 5.0f, 1.0f);
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_DRAGON_GROWL, SoundCategory.BLOCKS, 5.0f, 1.0f);
 
         float heightOffset = 1.6f;
         int distance = 20;
@@ -122,7 +122,7 @@ public class EchoStaff extends Item {
         Set<Entity> hit = new HashSet<>();
         for (int particleIndex = 1; particleIndex < MathHelper.floor(offsetToTarget.length()) + 7; ++particleIndex) {
             Vec3d particlePos = source.add(normalized.multiply(particleIndex));
-            ((ServerWorld) world).spawnParticles(ParticleTypes.SONIC_BOOM, particlePos.x, particlePos.y, particlePos.z, 1, 0.0, 0.0, 0.0, 0.0);
+            ((ServerWorld) world).spawnParticles(ParticleTypes.HEART, particlePos.x, particlePos.y, particlePos.z, 1, 0.0, 0.0, 0.0, 0.0);
 
             hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos((int) particlePos.getX(), (int) particlePos.getY(), (int) particlePos.getZ())).expand(1), it -> !(it instanceof WolfEntity)));
         }
@@ -131,7 +131,7 @@ public class EchoStaff extends Item {
 
         for (Entity hitTarget : hit) {
             if(hitTarget instanceof LivingEntity living) {
-                living.damage(world.getDamageSources().sonicBoom(user), 10.0f);
+                living.damage(world.getDamageSources().sonicBoom(user), 100.0f);
                 double vertical = 0.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 double horizontal = 2.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 living.addVelocity(normalized.getX() * horizontal, normalized.getY() * vertical, normalized.getZ() * horizontal);

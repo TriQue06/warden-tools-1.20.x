@@ -24,7 +24,7 @@ public class WardenModelProvider extends FabricModelProvider {
         itemModelGenerator.register(WardenItems.WARDEN_AXE, Models.HANDHELD);
         itemModelGenerator.register(WardenItems.WARDEN_HOE, Models.HANDHELD);
         itemModelGenerator.register(WardenItems.WARDEN_SWORD, Models.HANDHELD);
-        itemModelGenerator.register(WardenItems.ECHO_INGOT, Models.GENERATED);
+        itemModelGenerator.register(WardenItems.SCULK_SHELL, Models.GENERATED);
         itemModelGenerator.register(WardenItems.ECHO_APPLE, Models.GENERATED);
         itemModelGenerator.register(WardenItems.WARDEN_SOUL, Models.GENERATED);
 
