@@ -8,6 +8,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.passive.TameableEntity;
+import net.minecraft.item.Items;
 import net.trique.wardentools.item.WardenItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -72,10 +73,15 @@ public class EchoStaff extends Item {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if(!world.isClient) {
-            spawnSonicBoom(world, user);
+        if (!world.isClient && user instanceof PlayerEntity player) {
+            ItemStack echoShardStack = findEchoShard(player);
 
-            if(user instanceof PlayerEntity player) {
+            if (!echoShardStack.isEmpty()) {
+                spawnSonicBoom(world, user);
+
+                // Echo Shard'ı bir tane azalt
+                echoShardStack.decrement(1);
+
                 player.getItemCooldownManager().set(this, 80);
                 stack.damage(1, user, EquipmentSlot.MAINHAND);
             }
@@ -83,6 +89,17 @@ public class EchoStaff extends Item {
 
         return super.finishUsing(stack, world, user);
     }
+
+    private ItemStack findEchoShard(PlayerEntity player) {
+        for (int i = 0; i < player.getInventory().size(); i++) {
+            ItemStack stack = player.getInventory().getStack(i);
+            if (stack.isOf(Items.ECHO_SHARD)) {
+                return stack;
+            }
+        }
+        return ItemStack.EMPTY;
+    }
+
     private void spawnSonicBoom(World world, LivingEntity user) {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_WARDEN_SONIC_BOOM, SoundCategory.BLOCKS, 5.0f, 1.0f);
 
