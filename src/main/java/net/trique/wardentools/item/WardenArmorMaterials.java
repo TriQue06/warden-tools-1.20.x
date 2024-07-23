@@ -2,13 +2,13 @@ package net.trique.wardentools.item;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 import net.minecraft.item.*;
 import net.minecraft.item.ArmorItem.Type;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -28,13 +28,21 @@ public class WardenArmorMaterials{
         return RegistryEntry.of(material);
     }
 
+    private static RegistryEntry<SoundEvent> getSonicBoomSound() {
+        RegistryKey<SoundEvent> searchEntry = RegistryKey.of(RegistryKeys.SOUND_EVENT, SoundEvents.ENTITY_WARDEN_SONIC_BOOM.getId());
+        Optional<RegistryEntry.Reference<SoundEvent>> entry = BuiltinRegistries.createWrapperLookup().
+                createRegistryLookup().getOptionalEntry(RegistryKeys.SOUND_EVENT,
+                        searchEntry);
+        return entry.orElseThrow();
+    }
+
     public static final RegistryEntry<ArmorMaterial> WARDEN = registerMaterial("warden",
             Map.of(
                     Type.HELMET,4,
                     Type.CHESTPLATE, 7,
                     Type.LEGGINGS, 9,
                     Type.BOOTS,4
-            ),15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN,
+            ),15, getSonicBoomSound(),
             () -> Ingredient.ofItems(WardenItems.ECHO_INGOT),3.0f,0.1f,false);
 
 }
