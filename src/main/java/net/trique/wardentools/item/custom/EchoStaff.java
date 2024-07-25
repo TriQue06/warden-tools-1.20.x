@@ -74,16 +74,20 @@ public class EchoStaff extends Item {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient && user instanceof PlayerEntity player) {
-            ItemStack echoShardStack = findEchoShard(player);
+            if (!player.isCreative()){
+                ItemStack echoShardStack = findEchoShard(player);
 
-            if (!echoShardStack.isEmpty()) {
-                spawnSonicBoom(world, user);
+                if (!echoShardStack.isEmpty()) {
+                    spawnSonicBoom(world, user);
 
-                // Echo Shard'ı bir tane azalt
-                echoShardStack.decrement(1);
+                    // Echo Shard'ı bir tane azalt
+                    echoShardStack.decrement(1);
 
-                player.getItemCooldownManager().set(this, 80);
-                stack.damage(1, user, EquipmentSlot.MAINHAND);
+                    player.getItemCooldownManager().set(this, 80);
+                    stack.damage(1, user, EquipmentSlot.MAINHAND);
+                }
+            }else {
+            spawnSonicBoom(world, user);
             }
         }
 

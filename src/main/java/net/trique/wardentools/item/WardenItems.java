@@ -5,6 +5,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.trique.wardentools.WardenTools;
 import net.trique.wardentools.item.custom.*;
 
@@ -41,7 +42,7 @@ public class WardenItems {
             new Item(new Item.Settings().fireproof()));
 
     public static final Item ECHO_STAFF = registerItem("echo_staff",
-            new EchoStaff(new Item.Settings().fireproof().maxDamage(50)));
+            new EchoStaff(new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage(50)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new Item.Settings().fireproof().food(EchoApple.ECHO_APPLE)));
