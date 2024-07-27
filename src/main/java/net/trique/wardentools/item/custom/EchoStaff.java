@@ -8,10 +8,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.item.Items;
-import net.minecraft.text.LiteralTextContent;
 import net.trique.wardentools.item.WardenItems;
-import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -55,14 +54,19 @@ public class EchoStaff extends Item {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (!world.isClient && user instanceof PlayerEntity player) {
-            ItemStack echoShardStack = findEchoShard(player);
+            if(!player.isCreative()){
+                ItemStack echoShardStack = findEchoShard(player);
+                if (!echoShardStack.isEmpty()) {
+                    spawnSonicBoom(world, user);
 
-            if (!echoShardStack.isEmpty()) {
+                    // Echo Shard'ı bir tane azalt
+                    echoShardStack.decrement(1);
+
+                    player.getItemCooldownManager().set(this, 80);
+                    stack.damage(1, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
+                }
+            }else{
                 spawnSonicBoom(world, user);
-                echoShardStack.decrement(1);
-
-                player.getItemCooldownManager().set(this, 80);
-                stack.damage(1, user, x -> x.sendToolBreakStatus(Hand.MAIN_HAND));
             }
         }
 
@@ -81,7 +85,7 @@ public class EchoStaff extends Item {
 
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(Items.ECHO_SHARD);
+        return ingredient.isOf(WardenItems.SCULK_SHELL);
     }
 
     @Override
@@ -124,8 +128,9 @@ public class EchoStaff extends Item {
             Vec3d particlePos = source.add(normalized.multiply(particleIndex));
             ((ServerWorld) world).spawnParticles(ParticleTypes.SONIC_BOOM, particlePos.x, particlePos.y, particlePos.z, 1, 0.0, 0.0, 0.0, 0.0);
 
-            hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos((int) particlePos.getX(), (int) particlePos.getY(), (int) particlePos.getZ())).expand(1), it -> !(it instanceof WolfEntity)));
-        }
+            hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos((int) particlePos.getX(),
+                            (int) particlePos.getY(), (int) particlePos.getZ())).expand(1),
+                    it -> !(it instanceof TameableEntity helper && helper.isOwner(user))));        }
 
         hit.remove(user);
 

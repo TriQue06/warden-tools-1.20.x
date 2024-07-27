@@ -43,7 +43,7 @@ public class WardenItems {
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.SCULK_SHELL)));
 
     public static final Item ECHO_STAFF = registerItem("echo_staff",
-            new EchoStaff(new FabricItemSettings().rarity(Rarity.RARE).fireproof().maxDamage(64)));
+            new EchoStaff(new FabricItemSettings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.ECHO_APPLE)));

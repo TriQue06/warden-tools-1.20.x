@@ -25,9 +25,9 @@
   "block.wardentools.medium_sculkhyst_bud": "Ortanca Sculkist Tomurcuğu",
   "block.wardentools.small_sculkhyst_bud": "Küçük Sculkist Tomurcuğu",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Sculk Kabuğu ekleyin",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Yankı Külçesi ekleyin",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Netherit Ekipman",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Kabuğu",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Yankı Külçesi",
   "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi"
 }

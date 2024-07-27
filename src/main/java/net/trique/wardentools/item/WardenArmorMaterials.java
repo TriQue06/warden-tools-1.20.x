@@ -13,14 +13,12 @@ import net.minecraft.util.StringIdentifiable;
 import net.minecraft.util.Util;
 
 public enum WardenArmorMaterials implements StringIdentifiable, ArmorMaterial {
-    WARDEN("warden", 48, (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
+    WARDEN("warden", 48, Util.make(new EnumMap(Type.class), (map) -> {
         map.put(Type.BOOTS, 4);
         map.put(Type.LEGGINGS, 7);
         map.put(Type.CHESTPLATE, 9);
         map.put(Type.HELMET, 4);
-    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> {
-        return Ingredient.ofItems(new ItemConvertible[]{WardenItems.SCULK_SHELL});
-    });
+    }), 15, SoundEvents.ITEM_ARMOR_EQUIP_CHAIN, 3.0F, 0.1F, () -> Ingredient.ofItems(WardenItems.SCULK_SHELL));
 
     public static final Codec<ArmorMaterials> CODEC = StringIdentifiable.createCodec(ArmorMaterials::values);
     private static final EnumMap<Type, Integer> BASE_DURABILITY = (EnumMap)Util.make(new EnumMap(Type.class), (map) -> {
