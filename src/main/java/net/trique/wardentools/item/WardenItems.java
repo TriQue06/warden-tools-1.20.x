@@ -38,17 +38,17 @@ public class WardenItems {
     public static final Item WARDEN_BOOTS = registerItem("warden_boots",
             new ArmorItem(WardenArmorMaterials.WARDEN, ArmorItem.Type.BOOTS, new Item.Settings().fireproof().maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(48))));
 
-    public static final Item ECHO_INGOT = registerItem("echo_ingot",
-            new Item(new Item.Settings().fireproof()));
+    public static final Item SCULK_SHELL = registerItem("sculk_shell",
+            new Item(new Item.Settings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.SCULK_SHELL)));
 
     public static final Item ECHO_STAFF = registerItem("echo_staff",
-            new EchoStaff(new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage(64)));
+            new EchoStaff(new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
-            new Item(new Item.Settings().fireproof().food(EchoApple.ECHO_APPLE)));
+            new Item(new Item.Settings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.ECHO_APPLE)));
 
     public static final Item WARDEN_SOUL = registerItem("warden_soul",
-            new Item(new Item.Settings().fireproof()));
+            new Item(new Item.Settings().rarity(Rarity.RARE).fireproof()));
 
     public static Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {

@@ -30,13 +30,7 @@ public class DatagenHelper {
     }
     public static void offerShapedEchoStaffRecipe(RecipeExporter exporter){
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, WardenItems.ECHO_STAFF,1).input('s', WardenItems.WARDEN_SOUL).input(
-                'w',()-> Items.STICK).input('e', WardenItems.ECHO_INGOT).pattern("s").pattern("w").pattern("e").criterion(RecipeProvider.hasItem(WardenItems.WARDEN_SOUL),
-                RecipeProvider.conditionsFromItem(WardenItems.WARDEN_SOUL)).offerTo(exporter);
-    }
-
-    public static void offerShapedEchoIngotRecipe(RecipeExporter exporter){
-        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, WardenItems.ECHO_INGOT,1).input('n', Items.NETHERITE_INGOT).input(
-                's',()-> WardenItems.WARDEN_SOUL).input('e', Items.ECHO_SHARD).pattern("ene").pattern("nsn").pattern("ene").criterion(RecipeProvider.hasItem(WardenItems.WARDEN_SOUL),
+                'w',()-> WardenItems.SCULK_SHELL).input('e', Items.ECHO_SHARD).pattern("s").pattern("w").pattern("e").criterion(RecipeProvider.hasItem(WardenItems.SCULK_SHELL),
                 RecipeProvider.conditionsFromItem(WardenItems.WARDEN_SOUL)).offerTo(exporter);
     }
 }

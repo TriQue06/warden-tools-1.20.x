@@ -31,7 +31,7 @@ public class WardenItemGroup {
                         entries.add(WardenItems.WARDEN_LEGGINGS);
                         entries.add(WardenItems.WARDEN_BOOTS);
                         entries.add(WardenItems.WARDEN_SOUL);
-                        entries.add(WardenItems.ECHO_INGOT);
+                        entries.add(WardenItems.SCULK_SHELL);
                         entries.add(WardenItems.ECHO_APPLE);
                         entries.add(WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE);
                     }).build());

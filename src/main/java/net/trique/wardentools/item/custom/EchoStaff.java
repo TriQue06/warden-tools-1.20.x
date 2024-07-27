@@ -43,7 +43,7 @@ public class EchoStaff extends Item {
 
     @Override
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(WardenItems.ECHO_INGOT);
+        return ingredient.isOf(WardenItems.SCULK_SHELL);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class EchoStaff extends Item {
 
     @Override
     public int getMaxUseTime(ItemStack stack, LivingEntity usr) {
-        return 25;
+        return 20;
     }
 
     @Override
@@ -79,10 +79,7 @@ public class EchoStaff extends Item {
 
                 if (!echoShardStack.isEmpty()) {
                     spawnSonicBoom(world, user);
-
-                    // Echo Shard'ı bir tane azalt
                     echoShardStack.decrement(1);
-
                     player.getItemCooldownManager().set(this, 80);
                     stack.damage(1, user, EquipmentSlot.MAINHAND);
                 }
@@ -128,7 +125,7 @@ public class EchoStaff extends Item {
 
         for (Entity hitTarget : hit) {
             if(hitTarget instanceof LivingEntity living) {
-                living.damage(world.getDamageSources().sonicBoom(user), 16.0f);
+                living.damage(world.getDamageSources().sonicBoom(user), 10.0f);
                 double vertical = 0.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 double horizontal = 2.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 living.addVelocity(normalized.getX() * horizontal, normalized.getY() * vertical, normalized.getZ() * horizontal);

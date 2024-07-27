@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_echo_ingot": {
+    "has_sculk_shell": {
       "conditions": {
         "items": [
           {
-            "items": "wardentools:echo_ingot"
+            "items": "wardentools:sculk_shell"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_echo_ingot"
+      "has_sculk_shell"
     ]
   ],
   "rewards": {

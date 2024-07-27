@@ -1,13 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "wardentools:echo_staff"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_warden_soul": {
+    "has_sculk_shell": {
       "conditions": {
         "items": [
           {
@@ -16,12 +10,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wardentools:echo_staff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_warden_soul"
+      "has_sculk_shell"
     ]
   ],
   "rewards": {

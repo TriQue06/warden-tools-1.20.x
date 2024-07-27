@@ -43,6 +43,6 @@ public class WardenArmorMaterials{
                     Type.LEGGINGS, 9,
                     Type.BOOTS,4
             ),15, getSonicBoomSound(),
-            () -> Ingredient.ofItems(WardenItems.ECHO_INGOT),3.0f,0.1f,false);
+            () -> Ingredient.ofItems(WardenItems.SCULK_SHELL),3.0f,0.1f,false);
 
 }

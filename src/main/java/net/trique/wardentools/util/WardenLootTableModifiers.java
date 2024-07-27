@@ -1,6 +1,7 @@
 package net.trique.wardentools.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
@@ -19,6 +20,7 @@ import net.trique.wardentools.item.WardenItems;
 
 public class WardenLootTableModifiers {
     private static final Identifier ANCIENT_CITY_ID = LootTables.ANCIENT_CITY_CHEST.getValue();
+    private static final Identifier SCULK_SHRIEKER_ID = Blocks.SCULK_SHRIEKER.getLootTableKey().getValue();
     // ID for modifying vanilla loot table
     private static final Identifier WARDEN_LOOT_TABLE_ID = EntityType.WARDEN.getLootTableId().getValue();
     // Key for replacing vanilla loot table
@@ -34,8 +36,7 @@ public class WardenLootTableModifiers {
                                 )
                                 .with(ItemEntry.builder(WardenBlocks.SCULKHYST_BLOCK)
                                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                )
-                                .conditionally(KilledByPlayerLootCondition.builder()));
+                                ));
                 tableBuilder = builder.build();
                 return tableBuilder;
             }
@@ -51,37 +52,38 @@ public class WardenLootTableModifiers {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .with(ItemEntry.builder(WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE)
                                 .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)))
-                                .conditionally(RandomChanceLootCondition.builder(0.05f))
+                                .conditionally(RandomChanceLootCondition.builder(0.1f))
                         );
                 LootPool.Builder ApplePoolBuilder = LootPool.builder()
                         .with(ItemEntry.builder(WardenItems.ECHO_APPLE)
-                                .conditionally(RandomChanceLootCondition.builder(0.25f))
+                                .conditionally(RandomChanceLootCondition.builder(0.5f))
                                 .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f))))
+                        .rolls(ConstantLootNumberProvider.create(1));
+                LootPool.Builder SculkShellPoolBuilder = LootPool.builder()
+                        .with(ItemEntry.builder(WardenItems.SCULK_SHELL)
+                                .conditionally(RandomChanceLootCondition.builder(0.25f))
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f))))
                         .rolls(ConstantLootNumberProvider.create(1));
                 tableBuilder.pool(TemplatePoolBuilder);
                 tableBuilder.pool(ApplePoolBuilder);
+                tableBuilder.pool(SculkShellPoolBuilder);
             }
 
             if (WARDEN_LOOT_TABLE_ID.equals(key.getValue())){
 
                 LootPool.Builder SoulLootBuild = LootPool.builder();
-                LootPool.Builder ShardLootBuild = LootPool.builder();
                 SoulLootBuild
                         .rolls(ConstantLootNumberProvider.create(1f))
                         .with(ItemEntry.builder(WardenItems.WARDEN_SOUL)
-                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                .conditionally(KilledByPlayerLootCondition.builder())
-                                .conditionally(RandomChanceLootCondition.builder(0.33f)));
-                ShardLootBuild
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .with(ItemEntry.builder(Items.ECHO_SHARD)
-                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
-                                .conditionally(KilledByPlayerLootCondition.builder())
-                                .conditionally(RandomChanceLootCondition.builder(0.66f)))
-                        .rolls(ConstantLootNumberProvider.create(1));
-
-                tableBuilder.pool(ShardLootBuild);
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1))));
                 tableBuilder.pool(SoulLootBuild);
+            }
+            if(SCULK_SHRIEKER_ID.equals(key.getValue())) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))
+                        .with(ItemEntry.builder(WardenItems.WARDEN_SOUL))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)));
+                tableBuilder.pool(poolBuilder.build());
             }
         });
     }
