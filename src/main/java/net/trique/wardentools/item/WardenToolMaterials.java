@@ -1,29 +1,31 @@
 package net.trique.wardentools.item;
 
-import net.fabricmc.yarn.constants.MiningLevels;
+import com.google.common.base.Suppliers;
+import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
-import net.minecraft.util.Lazy;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum WardenToolMaterials implements ToolMaterial {
-    WARDEN(MiningLevels.NETHERITE, 3006, 11.0f, 6.0f, 18, () -> Ingredient.ofItems(WardenItems.SCULK_SHELL));
+    WARDEN(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3006, 11.0f, 6.0f, 18, () -> Ingredient.ofItems(WardenItems.SCULK_SHELL));
 
-    private final int miningLevel;
+    private final TagKey<Block> inverseTag;
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
-    private final Lazy<Ingredient> repairIngredient;
+    private final Supplier<Ingredient> repairIngredient;
 
-    private WardenToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
-        this.miningLevel = miningLevel;
+    WardenToolMaterials(final TagKey<Block> inverseTag, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+        this.inverseTag = inverseTag;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy<Ingredient>(repairIngredient);
+        this.repairIngredient = Suppliers.memoize(repairIngredient::get);
     }
 
     @Override
@@ -42,8 +44,8 @@ public enum WardenToolMaterials implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return this.miningLevel;
+    public TagKey<Block> getInverseTag() {
+        return this.inverseTag;
     }
 
     @Override

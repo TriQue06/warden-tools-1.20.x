@@ -4,10 +4,11 @@
     "item": "wardentools:sculk_shell"
   },
   "base": {
-    "item": "minecraft:netherite_helmet"
+    "item": "minecraft:netherite_axe"
   },
   "result": {
-    "item": "wardentools:warden_helmet"
+    "count": 1,
+    "id": "wardentools:warden_axe"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"

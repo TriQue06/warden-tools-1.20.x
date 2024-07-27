@@ -8,8 +8,8 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 public class DarknessSwordItem extends SwordItem {
-    public DarknessSwordItem(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+    public DarknessSwordItem(ToolMaterial toolMaterial, Settings settings) {
+        super(toolMaterial, settings);
     }
 
     @Override

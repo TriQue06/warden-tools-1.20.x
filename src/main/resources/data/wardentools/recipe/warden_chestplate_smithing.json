@@ -4,10 +4,11 @@
     "item": "wardentools:sculk_shell"
   },
   "base": {
-    "item": "minecraft:netherite_leggings"
+    "item": "minecraft:netherite_chestplate"
   },
   "result": {
-    "item": "wardentools:warden_leggings"
+    "count": 1,
+    "id": "wardentools:warden_chestplate"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"

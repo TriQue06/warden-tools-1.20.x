@@ -25,7 +25,7 @@ extends AmethystBlock {
         BlockPos blockPos = pos.offset(direction);
         BlockState blockState = world.getBlockState(blockPos);
         Block block = null;
-        if (BuddingAmethystBlock.canGrowIn(blockState)) {
+        if (BuddingSculkhystBlock.canGrowIn(blockState)) {
             block = WardenBlocks.SMALL_SCULKHYST_BUD;
         } else if (blockState.isOf(WardenBlocks.SMALL_SCULKHYST_BUD) && blockState.get(AmethystClusterBlock.FACING) == direction) {
             block = WardenBlocks.MEDIUM_SCULKHYST_BUD;

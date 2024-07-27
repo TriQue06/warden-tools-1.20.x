@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "wardentools:item/echo_ingot"
+    "layer0": "wardentools:item/sculk_shell"
   }
 }

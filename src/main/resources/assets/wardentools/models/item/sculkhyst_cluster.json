@@ -1,11 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/amethyst_cluster",
   "textures": {
     "layer0": "wardentools:block/sculkhyst_cluster"
-  },
-  "display": {
-    "head": {
-      "translation": [ 0, 14, -5 ]
-    }
   }
 }

@@ -15,7 +15,7 @@
     " e "
   ],
   "result": {
-    "item": "wardentools:echo_apple"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "wardentools:echo_apple"
+  }
 }

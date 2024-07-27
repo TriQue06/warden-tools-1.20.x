@@ -3,6 +3,7 @@ package net.trique.wardentools;
 import net.fabricmc.api.ModInitializer;
 
 import net.trique.wardentools.block.WardenBlocks;
+import net.trique.wardentools.item.WardenArmorMaterials;
 import net.trique.wardentools.item.WardenItemGroup;
 import net.trique.wardentools.item.WardenItems;
 import net.trique.wardentools.util.WardenLootTableModifiers;
@@ -22,6 +23,7 @@ public class WardenTools implements ModInitializer {
 		WardenWorldGeneration.generateWardenWorldGen();
 		WardenLootTableModifiers.replaceLootTables();
 		WardenLootTableModifiers.modifyLootTables();
+		WardenArmorMaterials.initialize();
 		LOGGER.info("Warden Tools works properly! NECO, ANNENE SELAMLAR KARDESIM! <3");
 	}
 }

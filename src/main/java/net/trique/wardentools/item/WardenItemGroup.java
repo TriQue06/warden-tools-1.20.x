@@ -11,7 +11,7 @@ import net.trique.wardentools.WardenTools;
 import net.trique.wardentools.block.WardenBlocks;
 
 public class WardenItemGroup {
-    public static ItemGroup WARDENITEMGROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(WardenTools.MOD_ID, "wardenitemgroup"),
+    public static ItemGroup WARDENITEMGROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(WardenTools.MOD_ID, "wardenitemgroup"),
             FabricItemGroup.builder().displayName(Text.literal("Warden Tools"))
                     .icon(() -> new ItemStack(WardenItems.WARDEN_CHESTPLATE)).entries((displayContext, entries) -> {
                         entries.add(WardenBlocks.SCULKHYST_BLOCK);

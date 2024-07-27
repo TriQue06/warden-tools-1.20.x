@@ -7,7 +7,8 @@
     "item": "minecraft:netherite_pickaxe"
   },
   "result": {
-    "item": "wardentools:warden_pickaxe"
+    "count": 1,
+    "id": "wardentools:warden_pickaxe"
   },
   "template": {
     "item": "wardentools:warden_upgrade_smithing_template"
