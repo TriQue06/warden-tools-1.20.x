@@ -31,6 +31,7 @@ public class WardenLootTableModifiers {
                                 .rolls(ConstantLootNumberProvider.create(1f))
                                 .with(ItemEntry.builder(Items.SCULK_CATALYST)
                                 )
+                                .rolls(ConstantLootNumberProvider.create(1f))
                                 .with(ItemEntry.builder(WardenBlocks.SCULKHYST_BLOCK)
                                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1)))
                                 ));
