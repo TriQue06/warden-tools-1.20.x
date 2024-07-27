@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "key": {
     "e": {
       "item": "minecraft:echo_shard"
     },
-    "n": {
-      "item": "minecraft:netherite_ingot"
-    },
     "s": {
       "item": "wardentools:warden_soul"
+    },
+    "w": {
+      "item": "wardentools:sculk_shell"
     }
   },
   "pattern": [
-    "ene",
-    "nsn",
-    "ene"
+    "s",
+    "w",
+    "e"
   ],
   "result": {
-    "item": "wardentools:echo_ingot"
+    "item": "wardentools:echo_staff"
   },
   "show_notification": true
 }

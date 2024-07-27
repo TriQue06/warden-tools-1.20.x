@@ -3,7 +3,7 @@
   
   "item.wardentools.warden_soul": "Muhafızın Ruhu",
   "item.wardentools.echo_apple": "Yankılanan Elma",
-  "item.wardentools.echo_ingot": "Yankı Külçesi",
+  "item.wardentools.sculk_shell": "Sculk Kabuğu",
 
   "item.wardentools.warden_helmet": "Muhafız Miğfer",
   "item.wardentools.warden_chestplate": "Muhafız Göğüslük",
@@ -25,9 +25,9 @@
   "block.wardentools.medium_sculkhyst_bud": "Ortanca Sculkist Tomurcuğu",
   "block.wardentools.small_sculkhyst_bud": "Küçük Sculkist Tomurcuğu",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Yankı Külçesi ekleyin",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Sculk Kabuğu ekleyin",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Netherit Ekipman",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Yankı Külçesi",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Kabuğu",
   "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi"
 }

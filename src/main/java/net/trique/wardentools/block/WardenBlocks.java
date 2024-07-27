@@ -21,10 +21,10 @@ public class WardenBlocks {
             new BuddingSculkhystBlock(AbstractBlock.Settings.create().mapColor(MapColor.CYAN).ticksRandomly().strength(1.5f).sounds(BlockSoundGroup.SCULK).requiresTool().pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block SCULKHYST_CLUSTER = registerBlock("sculkhyst_cluster",
-            new AmethystClusterBlock(7, 3, AbstractBlock.Settings.create().mapColor(MapColor.CYAN).solid().nonOpaque().ticksRandomly().sounds(BlockSoundGroup.SCULK).strength(1.5f).luminance(state -> 5).pistonBehavior(PistonBehavior.DESTROY)));
+            new AmethystClusterBlock(7, 3, AbstractBlock.Settings.create().mapColor(MapColor.CYAN).solid().nonOpaque().ticksRandomly().sounds(BlockSoundGroup.SCULK).strength(1.5f).luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block LARGE_SCULKHYST_BUD = registerBlock("large_sculkhyst_bud",
-            new AmethystClusterBlock(5, 3, AbstractBlock.Settings.copy(SCULKHYST_CLUSTER).sounds(BlockSoundGroup.SCULK).solid().luminance(state -> 4).pistonBehavior(PistonBehavior.DESTROY)));
+            new AmethystClusterBlock(5, 3, AbstractBlock.Settings.copy(SCULKHYST_CLUSTER).sounds(BlockSoundGroup.SCULK).solid().luminance(state -> 3).pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block MEDIUM_SCULKHYST_BUD = registerBlock("medium_sculkhyst_bud",
             new AmethystClusterBlock(4, 3, AbstractBlock.Settings.copy(SCULKHYST_CLUSTER).sounds(BlockSoundGroup.SCULK).solid().luminance(state -> 2).pistonBehavior(PistonBehavior.DESTROY)));

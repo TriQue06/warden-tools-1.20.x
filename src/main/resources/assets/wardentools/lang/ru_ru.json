@@ -3,7 +3,7 @@
   
   "item.wardentools.warden_soul": "Душа Хранителя",
   "item.wardentools.echo_apple": "Эхо-яблоко",
-  "item.wardentools.echo_ingot": "Эхо-слиток",
+  "item.wardentools.sculk_shell": "Скалковая ракушка",
 
   "item.wardentools.warden_helmet": "Шлем Хранителя",
   "item.wardentools.warden_chestplate": "Нагрудник Хранителя",
@@ -25,9 +25,9 @@
   "block.wardentools.medium_sculkhyst_bud": "Средний скалкцистовый бутон",
   "block.wardentools.small_sculkhyst_bud": "Маленький скалкцистовый бутон",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Добавьте эхо-слиток",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Добавьте скалковую ракушку",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Незеритовому снаряжению",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Добавьте незеритовую броню, оружие или инструмент",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Эхо-слиток",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Скалковая ракушка",
   "upgrade.minecraft.warden_upgrade": "Улучшение Хранителя"
 }

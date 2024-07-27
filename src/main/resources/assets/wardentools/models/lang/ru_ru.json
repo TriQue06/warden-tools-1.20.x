@@ -1,0 +1,33 @@
+{
+  "item.wardentools.warden_upgrade_smithing_template": "Кузнечный шаблон",
+  
+  "item.wardentools.warden_soul": "Душа Хранителя",
+  "item.wardentools.echo_apple": "Эхо-яблоко",
+  "item.wardentools.echo_shell": "",
+
+  "item.wardentools.warden_helmet": "Шлем Хранителя",
+  "item.wardentools.warden_chestplate": "Нагрудник Хранителя",
+  "item.wardentools.warden_leggings": "Поножи Хранителя",
+  "item.wardentools.warden_boots": "Ботинки Хранителя",
+  
+  "item.wardentools.warden_sword": "Меч Хранителя",
+  "item.wardentools.warden_axe": "Топор Хранителя",
+  "item.wardentools.warden_pickaxe": "Кирка Хранителя",
+  "item.wardentools.warden_shovel": "Лопата Хранителя",
+  "item.wardentools.warden_hoe": "Мотыга Хранителя",
+  "item.wardentools.echo_staff": "Эхо-посох",
+
+
+  "block.wardentools.sculkhyst_block": "Блок скалкциста",
+  "block.wardentools.budding_sculkhyst": "Растущий скалкцист",
+  "block.wardentools.sculkhyst_cluster": "Скалкцистовая друза",
+  "block.wardentools.large_sculkhyst_bud": "Большой скалкцистовый бутон",
+  "block.wardentools.medium_sculkhyst_bud": "Средний скалкцистовый бутон",
+  "block.wardentools.small_sculkhyst_bud": "Маленький скалкцистовый бутон",
+
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Добавьте эхо-слиток",
+  "item.minecraft.smithing_template.warden_upgrade.applies_to": "Незеритовому снаряжению",
+  "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Добавьте незеритовую броню, оружие или инструмент",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Эхо-слиток",
+  "upgrade.minecraft.warden_upgrade": "Улучшение Хранителя"
+}

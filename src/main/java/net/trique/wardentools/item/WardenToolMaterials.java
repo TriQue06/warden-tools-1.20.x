@@ -8,7 +8,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum WardenToolMaterials implements ToolMaterial {
-    WARDEN(MiningLevels.NETHERITE, 3006, 11.0f, 6.0f, 18, () -> Ingredient.ofItems(WardenItems.ECHO_INGOT));
+    WARDEN(MiningLevels.NETHERITE, 3006, 11.0f, 6.0f, 18, () -> Ingredient.ofItems(WardenItems.SCULK_SHELL));
 
     private final int miningLevel;
     private final int itemDurability;

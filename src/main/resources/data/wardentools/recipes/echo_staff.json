@@ -3,13 +3,13 @@
   "category": "equipment",
   "key": {
     "e": {
-      "item": "wardentools:echo_ingot"
+      "item": "minecraft:echo_shard"
     },
     "s": {
       "item": "wardentools:warden_soul"
     },
     "w": {
-      "item": "minecraft:stick"
+      "item": "wardentools:sculk_shell"
     }
   },
   "pattern": [
