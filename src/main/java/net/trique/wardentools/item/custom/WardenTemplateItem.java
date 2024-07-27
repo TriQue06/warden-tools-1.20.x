@@ -99,6 +99,6 @@ public class WardenTemplateItem extends SmithingTemplateItem {
         EMPTY_SLOT_SWORD_TEXTURE = new Identifier("minecraft:item/empty_slot_sword");
         EMPTY_SLOT_SHOVEL_TEXTURE = new Identifier("minecraft:item/empty_slot_shovel");
         EMPTY_SLOT_PICKAXE_TEXTURE = new Identifier("minecraft:item/empty_slot_pickaxe");
-        EMPTY_SLOT_SCULK_SHELL_TEXTURE = new Identifier("minecraft:item/empty_sculk_shell");
+        EMPTY_SLOT_SCULK_SHELL_TEXTURE = new Identifier("wardentools:item/empty_slot_sculk_shell");
     }
 }

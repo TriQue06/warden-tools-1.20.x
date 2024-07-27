@@ -3,7 +3,7 @@
 
   "item.wardentools.warden_soul": "ウォーデンの魂",
   "item.wardentools.echo_apple": "残響のリンゴ",
-  "item.wardentools.sculk_shell": "<>",
+  "item.wardentools.sculk_shell": "Sculk SHell",
 
   "item.wardentools.warden_helmet": "ウォーデンのヘルメット",
   "item.wardentools.warden_chestplate": "ウォーデンのチェストプレート",
@@ -24,9 +24,9 @@
   "block.wardentools.medium_sculkhyst_bud": "中くらいのスカルクジストの芽",
   "block.wardentools.small_sculkhyst_bud": "小さなスカルクジストの芽",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "<>を置いてください",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Sculk SHellを置いてください",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "ネザライトの装備品",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "ネザライト製の防具、武器、道具を置いてください",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "<>",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk SHell",
   "upgrade.minecraft.warden_upgrade": "ウォーデン強化"
 }

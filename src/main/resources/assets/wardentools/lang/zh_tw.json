@@ -3,7 +3,7 @@
   
   "item.wardentools.warden_soul": "伏守者靈魂",
   "item.wardentools.echo_apple": "回聲蘋果",
-  "item.wardentools.sculk_shell": "<>",
+  "item.wardentools.sculk_shell": "Sculk SHell",
 
   "item.wardentools.warden_helmet": "伏守者頭盔",
   "item.wardentools.warden_chestplate": "伏守者胸甲",
@@ -24,9 +24,9 @@
   "block.wardentools.medium_sculkhyst_bud": "中型伏聆晶芽",
   "block.wardentools.small_sculkhyst_bud": "小型伏聆晶芽",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "放置<>",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "放置Sculk SHell",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "獄髓裝備",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "放置獄髓盔甲、武器或工具",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "<>",
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk SHell",
   "upgrade.minecraft.warden_upgrade": "伏守者升級"
 }
