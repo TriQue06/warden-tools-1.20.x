@@ -7,12 +7,10 @@ import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.LootTables;
-import net.minecraft.loot.condition.KilledByPlayerLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.trique.wardentools.block.WardenBlocks;
@@ -57,7 +55,7 @@ public class WardenLootTableModifiers {
                 LootPool.Builder ApplePoolBuilder = LootPool.builder()
                         .with(ItemEntry.builder(WardenItems.ECHO_APPLE)
                                 .conditionally(RandomChanceLootCondition.builder(0.5f))
-                                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f))))
+                                .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1))))
                         .rolls(ConstantLootNumberProvider.create(1));
                 LootPool.Builder SculkShellPoolBuilder = LootPool.builder()
                         .with(ItemEntry.builder(WardenItems.SCULK_SHELL)
@@ -70,7 +68,6 @@ public class WardenLootTableModifiers {
             }
 
             if (WARDEN_LOOT_TABLE_ID.equals(key.getValue())){
-
                 LootPool.Builder SoulLootBuild = LootPool.builder();
                 SoulLootBuild
                         .rolls(ConstantLootNumberProvider.create(1f))
