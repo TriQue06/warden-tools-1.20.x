@@ -35,7 +35,7 @@
                     {
                       "condition": "minecraft:match_tool",
                       "predicate": {
-                        "tag": "minecraft:cluster_max_harvestables"
+                        "tag": "wardentools:sculkhyst_cluster_max_harvestables"
                       }
                     }
                   ],
@@ -74,6 +74,5 @@
       ],
       "rolls": 1.0
     }
-  ],
-  "random_sequence": "wardentools:blocks/sculkhyst_cluster"
+  ]
 }
