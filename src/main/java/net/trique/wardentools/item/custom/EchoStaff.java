@@ -54,7 +54,7 @@ public class EchoStaff extends Item {
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
-        return UseAction.BLOCK;
+        return UseAction.BOW;
     }
 
     @Override
