@@ -7,25 +7,24 @@
         {
           "condition": "minecraft:match_tool",
           "predicate": {
-            "enchantments": [
-              {
-                "enchantment": "minecraft:silk_touch",
-                "levels": {
-                  "min": 1
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "minecraft:silk_touch"
                 }
-              }
-            ]
+              ]
+            }
           }
         }
       ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wardentools:small_sculkhyst_bud"
+          "name": "wardentools:medium_sculkhyst_bud"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "wardentools:blocks/small_sculkhyst_bud"
+  "random_sequence": "wardentools:blocks/medium_sculkhyst_bud"
 }

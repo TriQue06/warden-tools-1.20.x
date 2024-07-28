@@ -33,4 +33,5 @@ public class DatagenHelper {
                 'w',()-> WardenItems.SCULK_SHELL).input('e', Items.ECHO_SHARD).pattern("s").pattern("w").pattern("e").criterion(RecipeProvider.hasItem(WardenItems.SCULK_SHELL),
                 RecipeProvider.conditionsFromItem(WardenItems.WARDEN_SOUL)).offerTo(exporter);
     }
+
 }

@@ -8,6 +8,7 @@ import net.trique.wardentools.data.WardenItemTagProvider;
 import net.trique.wardentools.data.WardenModelProvider;
 import net.trique.wardentools.data.WardenRecipeGenerator;
 import net.trique.wardentools.data.WardenWorldGenerator;
+import net.trique.wardentools.util.ClusterDropDatagen;
 import net.trique.wardentools.world.WardenConfiguredFeatures;
 import net.trique.wardentools.world.WardenPlacedFeatures;
 
@@ -19,6 +20,7 @@ public class WardenToolsDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(WardenWorldGenerator::new);
 		pack.addProvider(WardenRecipeGenerator::new);
 		pack.addProvider(WardenItemTagProvider::new);
+		pack.addProvider(ClusterDropDatagen::new);
 	}
 
 	@Override
