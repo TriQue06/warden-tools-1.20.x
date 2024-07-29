@@ -36,4 +36,5 @@ public class SculkhystBlock extends Block {
             world.playSound(null, blockPos, SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.BLOCKS, 1.0f, 0.5f + world.random.nextFloat() * 1.2f);
         }
     }
+
 }

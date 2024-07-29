@@ -35,6 +35,6 @@ public class WardenItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 WardenItems.WARDEN_CHESTPLATE,
                 WardenItems.WARDEN_LEGGINGS,
                 WardenItems.WARDEN_BOOTS);
-        getOrCreateTagBuilder(SCULKHYST_CLUSTER_MAX_HARVESTABLES).addTag(ItemTags.HOES);
+        getOrCreateTagBuilder(SCULKHYST_CLUSTER_MAX_HARVESTABLES).forceAddTag(ItemTags.HOES);
     }
 }
