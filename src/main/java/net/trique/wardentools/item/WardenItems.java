@@ -50,6 +50,7 @@ public class WardenItems {
     public static final Item WARDEN_SOUL = registerItem("warden_soul",
             new Item(new Item.Settings().rarity(Rarity.RARE).fireproof()));
 
+
     public static Item WARDEN_UPGRADE_SMITHING_TEMPLATE;
     static {
         WARDEN_UPGRADE_SMITHING_TEMPLATE = registerItem("warden_upgrade_smithing_template", WardenTemplateItem.createWardenUpgrade());
