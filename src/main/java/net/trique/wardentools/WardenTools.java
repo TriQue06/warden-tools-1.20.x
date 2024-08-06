@@ -6,6 +6,7 @@ import net.trique.wardentools.block.WardenBlocks;
 import net.trique.wardentools.item.WardenArmorMaterials;
 import net.trique.wardentools.item.WardenItemGroup;
 import net.trique.wardentools.item.WardenItems;
+import net.trique.wardentools.util.SonicBoomSound;
 import net.trique.wardentools.util.WardenLootTableModifiers;
 import net.trique.wardentools.world.gen.WardenWorldGeneration;
 import org.slf4j.Logger;
@@ -17,9 +18,10 @@ public class WardenTools implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		WardenItemGroup.registerWardenGroups();
+		SonicBoomSound.SonicBoomSound();
 		WardenItems.registerWardenItems();
 		WardenBlocks.registerWardenBlocks();
+		WardenItemGroup.registerWardenGroups();
 		WardenWorldGeneration.generateWardenWorldGen();
 		WardenLootTableModifiers.replaceLootTables();
 		WardenLootTableModifiers.modifyLootTables();
