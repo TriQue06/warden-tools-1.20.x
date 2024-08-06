@@ -2,7 +2,6 @@ package net.trique.wardentools.item;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.function.Supplier;
 
 import net.minecraft.item.*;
@@ -11,9 +10,9 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.trique.wardentools.WardenTools;
+import net.trique.wardentools.util.SonicBoomSound;
 
 public class WardenArmorMaterials{
     public static void initialize(){}
@@ -28,21 +27,13 @@ public class WardenArmorMaterials{
         return RegistryEntry.of(material);
     }
 
-    private static RegistryEntry<SoundEvent> getSonicBoomSound() {
-        RegistryKey<SoundEvent> searchEntry = RegistryKey.of(RegistryKeys.SOUND_EVENT, SoundEvents.ENTITY_WARDEN_SONIC_BOOM.getId());
-        Optional<RegistryEntry.Reference<SoundEvent>> entry = BuiltinRegistries.createWrapperLookup().
-                createRegistryLookup().getOptionalEntry(RegistryKeys.SOUND_EVENT,
-                        searchEntry);
-        return entry.orElseThrow();
-    }
-
     public static final RegistryEntry<ArmorMaterial> WARDEN = registerMaterial("warden",
             Map.of(
                     Type.HELMET,4,
                     Type.CHESTPLATE, 7,
                     Type.LEGGINGS, 9,
                     Type.BOOTS,4
-            ),15, getSonicBoomSound(),
+            ),15, SonicBoomSound.SONIC_BOOM_SOUND,
             () -> Ingredient.ofItems(WardenItems.SCULK_SHELL),3.0f,0.1f,false);
 
 }
