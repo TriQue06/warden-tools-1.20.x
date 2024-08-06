@@ -28,5 +28,11 @@
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Netherit Ekipman",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
   "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Kabuğu",
-  "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi"
+  "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi",
+
+  "effect.wardentools.warden_slayer": "Warden slayer",
+  "item.minecraft.potion.effect.warden_slayer": "Warden Slayer Potion",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Splash Potion of the Warden Slayer",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Lingering Potion of the Warden Slayer",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Arrow of the Warden Slayer"
 }

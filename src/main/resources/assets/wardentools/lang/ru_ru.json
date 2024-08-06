@@ -28,5 +28,11 @@
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Незеритовому снаряжению",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Добавьте незеритовую броню, оружие или инструмент",
   "item.minecraft.smithing_template.warden_upgrade.ingredients": "Скалковая ракушка",
-  "upgrade.minecraft.warden_upgrade": "Улучшение Хранителя"
+  "upgrade.minecraft.warden_upgrade": "Улучшение Хранителя",
+
+  "effect.wardentools.warden_slayer": "Убийца Хранителя",
+  "item.minecraft.potion.effect.warden_slayer": "Зелье Убийцы Хранителя",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Взрывное зелье Убийцы Хранителя",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Туманное зелье Убийцы Хранителя",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Стрела Убийцы Хранителя"
 }

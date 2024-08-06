@@ -28,5 +28,11 @@
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "下界合金装备",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "放置下界合金盔甲、武器或工具",
   "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Shell",
-  "upgrade.minecraft.warden_upgrade": "监守者升级"
+  "upgrade.minecraft.warden_upgrade": "监守者升级",
+
+  "effect.wardentools.warden_slayer": "Warden slayer",
+  "item.minecraft.potion.effect.warden_slayer": "Warden Slayer Potion",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Splash Potion of the Warden Slayer",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Lingering Potion of the Warden Slayer",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Arrow of the Warden Slayer"
 }

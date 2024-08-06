@@ -28,5 +28,11 @@
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "ネザライトの装備品",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "ネザライト製の防具、武器、道具を置いてください",
   "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Shell",
-  "upgrade.minecraft.warden_upgrade": "ウォーデン強化"
+  "upgrade.minecraft.warden_upgrade": "ウォーデン強化",
+
+  "effect.wardentools.warden_slayer": "Warden slayer",
+  "item.minecraft.potion.effect.warden_slayer": "Warden Slayer Potion",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Splash Potion of the Warden Slayer",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Lingering Potion of the Warden Slayer",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Arrow of the Warden Slayer"
 }
