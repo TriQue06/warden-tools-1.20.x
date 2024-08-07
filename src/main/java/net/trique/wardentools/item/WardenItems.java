@@ -44,6 +44,9 @@ public class WardenItems {
     public static final Item ECHO_STAFF = registerItem("echo_staff",
             new EchoStaff(new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
+    public static final Item ECHO_SHRIEKER = registerItem("echo_shrieker",
+            new ShriekerBow(new Item.Settings().rarity(Rarity.EPIC).fireproof().maxDamage(50)));
+
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new Item.Settings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.ECHO_APPLE)));
 
