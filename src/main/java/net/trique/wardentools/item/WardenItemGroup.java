@@ -36,6 +36,7 @@ public class WardenItemGroup {
                         entries.add(WardenItems.WARDEN_BOOTS);
                         entries.add(WardenItems.WARDEN_SOUL);
                         entries.add(WardenItems.SCULK_SHELL);
+                        entries.add(WardenItems.SHRIEKER_FANG);
                         entries.add(WardenItems.ECHO_APPLE);
                         entries.add(WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE);
                         entries.add(PotionContentsComponent.createStack(Items.POTION,WardenPotion.WARDEN_SLAYER_POTION));

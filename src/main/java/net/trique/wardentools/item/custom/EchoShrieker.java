@@ -27,8 +27,8 @@ import net.trique.wardentools.item.WardenItems;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ShriekerBow extends BowItem {
-    public ShriekerBow(Settings settings) {
+public class EchoShrieker extends BowItem {
+    public EchoShrieker(Settings settings) {
         super(settings.attributeModifiers(createAttributeModifiers()));
     }
 
@@ -68,7 +68,7 @@ public class ShriekerBow extends BowItem {
     }
 
     public boolean canRepair(ItemStack stack, ItemStack ingredient) {
-        return ingredient.isOf(WardenItems.WARDEN_SOUL);
+        return ingredient.isOf(WardenItems.SHRIEKER_FANG);
     }
 
     private void spawnSonicBoom(World world, LivingEntity user) {

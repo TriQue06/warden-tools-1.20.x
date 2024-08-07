@@ -41,11 +41,14 @@ public class WardenItems {
     public static final Item SCULK_SHELL = registerItem("sculk_shell",
             new Item(new Item.Settings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.SCULK_SHELL)));
 
+    public static final Item SHRIEKER_FANG = registerItem("shrieker_fang",
+            new Item(new Item.Settings().rarity(Rarity.EPIC).fireproof()));
+
     public static final Item ECHO_STAFF = registerItem("echo_staff",
             new EchoStaff(new Item.Settings().rarity(Rarity.RARE).fireproof().maxDamage(35)));
 
     public static final Item ECHO_SHRIEKER = registerItem("echo_shrieker",
-            new ShriekerBow(new Item.Settings().rarity(Rarity.EPIC).fireproof().maxDamage(50)));
+            new EchoShrieker(new Item.Settings().rarity(Rarity.EPIC).fireproof().maxDamage(50)));
 
     public static final Item ECHO_APPLE = registerItem("echo_apple",
             new Item(new Item.Settings().rarity(Rarity.RARE).fireproof().food(WardenFoodItem.ECHO_APPLE)));

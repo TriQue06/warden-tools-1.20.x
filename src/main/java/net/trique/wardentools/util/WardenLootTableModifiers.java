@@ -77,8 +77,8 @@ public class WardenLootTableModifiers {
             }
             if(SCULK_SHRIEKER_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
-                        .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(ItemEntry.builder(WardenItems.WARDEN_SOUL))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .with(ItemEntry.builder(WardenItems.SHRIEKER_FANG))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)));
                 tableBuilder.pool(poolBuilder.build());
             }

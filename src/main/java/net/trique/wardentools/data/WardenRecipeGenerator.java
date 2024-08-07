@@ -32,5 +32,6 @@ public class WardenRecipeGenerator extends FabricRecipeProvider {
         offerCustomUpgradeRecipe(exporter,WardenItems.WARDEN_UPGRADE_SMITHING_TEMPLATE,Items.NETHERITE_BOOTS,WardenItems.SCULK_SHELL, RecipeCategory.COMBAT,WardenItems.WARDEN_BOOTS);
         offerShapedEchoAppleRecipe(exporter);
         offerShapedEchoStaffRecipe(exporter);
+        offerShapedEchoShriekerRecipe(exporter);
     }
 }

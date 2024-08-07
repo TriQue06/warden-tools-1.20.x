@@ -34,4 +34,13 @@ public class DatagenHelper {
                 RecipeProvider.conditionsFromItem(WardenItems.WARDEN_SOUL)).offerTo(exporter);
     }
 
+    public static void offerShapedEchoShriekerRecipe(RecipeExporter exporter){
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, WardenItems.ECHO_SHRIEKER,1)
+                .input('f', WardenItems.SHRIEKER_FANG)
+                .input('s',WardenItems.ECHO_STAFF)
+                .input('h',Items.ECHO_SHARD)
+                .input('r',Items.STRING).pattern("fhr").pattern(" sr").pattern("fhr")
+                .criterion(RecipeProvider.hasItem(WardenItems.SHRIEKER_FANG),RecipeProvider.conditionsFromItem(WardenItems.ECHO_STAFF)).offerTo(exporter);
+    }
+
 }
