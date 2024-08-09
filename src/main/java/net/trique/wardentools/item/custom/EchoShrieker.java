@@ -7,6 +7,8 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
@@ -101,6 +103,10 @@ public class EchoShrieker extends BowItem {
 
                 System.out.println("Damage " + damage + "\nDistance " + distanceToTarget);
                 living.damage(world.getDamageSources().sonicBoom(user), damage);
+                living.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 100));
+                living.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS,100,2));
+                living.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS,160,2));
+                living.addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS,60));
                 double vertical = 0.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 double horizontal = 2.5 * (1.0 - living.getAttributeValue(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE));
                 living.addVelocity(normalized.getX() * horizontal, normalized.getY() * vertical, normalized.getZ() * horizontal);

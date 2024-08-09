@@ -30,7 +30,7 @@ public class WardenArmorMaterials{
     public static final RegistryEntry<ArmorMaterial> WARDEN = registerMaterial("warden",
             Map.of(
                     Type.HELMET,4,
-                    Type.CHESTPLATE, 7,
+                    Type.CHESTPLATE, 8,
                     Type.LEGGINGS, 9,
                     Type.BOOTS,4
             ),15, SonicBoomSound.SONIC_BOOM_SOUND,
