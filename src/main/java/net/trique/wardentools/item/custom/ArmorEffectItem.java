@@ -13,8 +13,9 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.World;
 
 public class ArmorEffectItem extends ArmorItem {
-    private static final int effectDuration = 400;
+    private static final int effectDuration = StatusEffectInstance.INFINITE;
     private static final int amplifier = 0;
+    private boolean appliedByArmor;
     private final RegistryEntry<StatusEffect> effect;
 
     public ArmorEffectItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings, RegistryEntry<StatusEffect> effect) {
@@ -47,6 +48,14 @@ public class ArmorEffectItem extends ArmorItem {
     private void evaluateArmorEffects(PlayerEntity player) {
         if (hasCorrectArmorOn(material.value(), player)) {
             addStatusEffect(player);
+        }else {
+            if(player.hasStatusEffect(this.effect) && appliedByArmor){
+                if((player.getActiveStatusEffects().get(this.effect).getDuration() == StatusEffectInstance.INFINITE)){
+                    player.removeStatusEffect(this.effect);
+                    appliedByArmor = false;
+                    player.addStatusEffect(new StatusEffectInstance(this.effect,300,0,false,false,false));
+                }
+            }
         }
     }
 
@@ -71,15 +80,10 @@ public class ArmorEffectItem extends ArmorItem {
     }
 
     private void addStatusEffect(PlayerEntity player) {
-        if (!player.hasStatusEffect(this.effect)) {
+        if (!player.hasStatusEffect(this.effect) ||
+                !(player.getActiveStatusEffects().get(this.effect).getDuration() == StatusEffectInstance.INFINITE)) {
+            appliedByArmor = true;
             player.addStatusEffect(new StatusEffectInstance(this.effect, effectDuration, amplifier, false, false, false));
-        }
-
-        // effect repeat issue fix
-        if (player.getActiveStatusEffects().containsKey(this.effect)) {
-            if (player.getActiveStatusEffects().get(this.effect).getDuration() < 221) {
-                player.addStatusEffect(new StatusEffectInstance(this.effect, effectDuration, amplifier, false, false, false));
-            }
         }
     }
 }
