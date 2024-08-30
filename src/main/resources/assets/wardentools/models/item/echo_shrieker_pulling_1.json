@@ -1,5 +1,5 @@
 {
-  "parent": "item/bow",
+  "parent": "wardentools:item/echo_shrieker",
   "textures": {
     "layer0": "wardentools:item/echo_shrieker_pulling_1"
   }
