@@ -7,6 +7,7 @@ import net.trique.wardentools.effect.WardenToolsEffects;
 import net.trique.wardentools.item.WardenArmorMaterials;
 import net.trique.wardentools.item.WardenItemGroup;
 import net.trique.wardentools.item.WardenItems;
+import net.trique.wardentools.particle.ModParticles;
 import net.trique.wardentools.potion.WardenPotion;
 import net.trique.wardentools.util.SonicBoomSound;
 import net.trique.wardentools.util.WardenLootTableModifiers;
@@ -30,6 +31,7 @@ public class WardenTools implements ModInitializer {
 		WardenArmorMaterials.initialize();
 		WardenToolsEffects.regEffect();
 		WardenPotion.RegPotion();
+		ModParticles.regParticles();
 		LOGGER.info("Warden Tools works properly! NECO, ANNENE SELAMLAR KARDESIM! <3");
 	}
 }

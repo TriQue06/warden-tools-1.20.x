@@ -80,7 +80,12 @@ public class WardenLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(0.25f))
                         .with(ItemEntry.builder(WardenItems.SHRIEKER_FANG))
                         .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)));
-                tableBuilder.pool(poolBuilder.build());
+                LootPool.Builder SoulpoolBuilder = LootPool.builder()
+                        .conditionally(RandomChanceLootCondition.builder(0.1f))
+                        .with(ItemEntry.builder(WardenItems.WARDEN_SOUL))
+                        .apply(SetCountLootFunction.builder(ConstantLootNumberProvider.create(1.0f)));
+                tableBuilder.pool(poolBuilder);
+                tableBuilder.pool(SoulpoolBuilder);
             }
         });
     }

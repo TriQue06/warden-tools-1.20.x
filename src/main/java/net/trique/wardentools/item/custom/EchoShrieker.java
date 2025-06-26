@@ -1,5 +1,9 @@
 package net.trique.wardentools.item.custom;
 
+import net.minecraft.client.particle.NoteParticle;
+import net.minecraft.client.particle.ParticleFactory;
+import net.minecraft.client.particle.SpriteProvider;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.entity.Entity;
@@ -14,6 +18,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -25,6 +30,8 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.trique.wardentools.item.WardenItems;
+import net.trique.wardentools.particle.ModParticles;
+import net.trique.wardentools.particle.custom.ShriekParticle;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -59,7 +66,7 @@ public class EchoShrieker extends BowItem {
             if (!((double) loadAmount < 0.1f)) {
                 if (!player.isCreative()) {
                     spawnSonicBoom(world, user);
-                    player.getItemCooldownManager().set(this, 200);
+                    player.getItemCooldownManager().set(this, 120);
                     stack.damage(1, user, EquipmentSlot.MAINHAND);
                 } else {
                     System.out.println(loadAmount);
@@ -87,7 +94,9 @@ public class EchoShrieker extends BowItem {
         double expansion = 0.5;
         for (int particleIndex = 1; particleIndex < MathHelper.floor(offsetToTarget.length()); ++particleIndex) {
             Vec3d particlePos = source.add(normalized.multiply(particleIndex));
-            ((ServerWorld) world).spawnParticles(ParticleTypes.SONIC_BOOM, particlePos.x, particlePos.y, particlePos.z, 1, 0.0, 0.0, 0.0, 0.0);
+
+            ((ServerWorld) world).spawnParticles(ModParticles.SHRIEK_PARTICLE, particlePos.x, particlePos.y, particlePos.z, 1, 0, 0, 0, 0.0);
+
             hit.addAll(world.getEntitiesByClass(LivingEntity.class, new Box(new BlockPos((int) particlePos.getX(),
                             (int) particlePos.getY(), (int) particlePos.getZ())).expand(expansion),
                     it -> !(it instanceof TameableEntity helper && helper.isOwner(user))));
@@ -100,7 +109,6 @@ public class EchoShrieker extends BowItem {
             if (hitTarget instanceof LivingEntity living) {
                 float distanceToTarget = user.distanceTo(living);
                 float damage = finalDamage(remainTicks, distanceToTarget, living);
-
                 System.out.println("Damage " + damage + "\nDistance " + distanceToTarget);
                 living.damage(world.getDamageSources().sonicBoom(user), damage);
                 living.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 100));
