@@ -3,9 +3,13 @@
 	"id": "wardentools",
 	"version": "${version}",
 	"name": "Warden Tools",
-	"description": "Warden Tools adds new Warden gear and Echo Staff!",
+	"description": "Warden Tools adds new Warden set and Echo Staff!",
 	"authors": [
 		"TriQue"
+	],
+	"contributors": [
+		"Zyablik",
+		"CyberSteve777"
 	],
 	"license": "MIT",
 	"icon": "assets/wardentools/icon.png",
@@ -22,12 +26,15 @@
 		]
 	},
 	"depends": {
-		"fabricloader": ">=0.14.22",
-		"minecraft": "~1.20.2",
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
 		"another-mod": "*"
-	}
+	},
+	"mixins": [
+		"wardentools.mixins.json"
+	]
 }

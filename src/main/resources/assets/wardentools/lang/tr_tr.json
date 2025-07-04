@@ -2,8 +2,8 @@
   "item.wardentools.warden_upgrade_smithing_template": "Demirci Şablonu",
 
   "item.wardentools.warden_soul": "Muhafızın Ruhu",
-  "item.wardentools.echo_apple": "Yankılanan Elma",
-  "item.wardentools.echo_ingot": "Yankı Külçesi",
+  "item.wardentools.echo_apple": "Yankıli Elma",
+  "item.wardentools.sculk_shell": "Sculk Kabuğu",
 
   "item.wardentools.warden_helmet": "Muhafız Miğfer",
   "item.wardentools.warden_chestplate": "Muhafız Göğüslük",
@@ -16,6 +16,8 @@
   "item.wardentools.warden_shovel": "Muhafız Kürek",
   "item.wardentools.warden_hoe": "Muhafız Çapa",
   "item.wardentools.echo_staff": "Yankı Asası",
+  "item.wardentools.echo_shrieker": "Echo Shrieker",
+  "item.wardentools.shrieker_fang": "Shrieker Fang",
 
   "block.wardentools.sculkhyst_block": "Sculkist Bloğu",
   "block.wardentools.budding_sculkhyst": "Tomurcuklanan Sculkist",
@@ -24,9 +26,15 @@
   "block.wardentools.medium_sculkhyst_bud": "Ortanca Sculkist Tomurcuğu",
   "block.wardentools.small_sculkhyst_bud": "Küçük Sculkist Tomurcuğu",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Yankı Külçesi ekleyin",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Sculk Kabuğu ekleyin",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "Netherit Ekipman",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "Netherit zırh, silah veya alet ekleyin",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Yankı Külçesi",
-  "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi"
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Kabuğu",
+  "upgrade.minecraft.warden_upgrade": "Muhafız Yükseltmesi",
+
+  "effect.wardentools.warden_slayer": "Warden slayer",
+  "item.minecraft.potion.effect.warden_slayer": "Warden Slayer Potion",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Splash Potion of the Warden Slayer",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Lingering Potion of the Warden Slayer",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Arrow of the Warden Slayer"
 }

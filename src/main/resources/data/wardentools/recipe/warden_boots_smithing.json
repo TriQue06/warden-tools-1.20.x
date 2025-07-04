@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "wardentools:sculk_shell"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "wardentools:warden_boots"
+  },
+  "template": {
+    "item": "wardentools:warden_upgrade_smithing_template"
+  }
+}

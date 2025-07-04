@@ -18,12 +18,12 @@ public class WardenPlacedFeatures {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
         register(context, SCULKHYST_GEODE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(WardenConfiguredFeatures.SCULKHYST_GEODE_KEY),
-                RarityFilterPlacementModifier.of(64), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
+                RarityFilterPlacementModifier.of(12), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(0),
                         YOffset.aboveBottom(128)), BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier(WardenTools.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(WardenTools.MOD_ID, name));
     }
 
     private static void register(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> key, RegistryEntry<ConfiguredFeature<?, ?>> configuration,

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "minecraft:apple"
+    },
+    "e": {
+      "item": "minecraft:echo_shard"
+    }
+  },
+  "pattern": [
+    " e ",
+    "eae",
+    " e "
+  ],
+  "result": {
+    "count": 1,
+    "id": "wardentools:echo_apple"
+  }
+}

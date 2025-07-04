@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "e": {
+      "item": "minecraft:echo_shard"
+    },
+    "s": {
+      "item": "wardentools:warden_soul"
+    },
+    "w": {
+      "item": "wardentools:sculk_shell"
+    }
+  },
+  "pattern": [
+    "s",
+    "w",
+    "e"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wardentools:echo_staff"
+  }
+}

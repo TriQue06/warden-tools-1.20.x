@@ -3,7 +3,9 @@
 
   "item.wardentools.warden_soul": "ウォーデンの魂",
   "item.wardentools.echo_apple": "残響のリンゴ",
+  "item.wardentools.sculk_shell": "Sculk Shell",
   "item.wardentools.echo_ingot": "残響インゴット",
+
 
   "item.wardentools.warden_helmet": "ウォーデンのヘルメット",
   "item.wardentools.warden_chestplate": "ウォーデンのチェストプレート",
@@ -17,6 +19,9 @@
   "item.wardentools.warden_hoe": "ウォーデンのクワ",
   "item.wardentools.echo_staff": "残響の杖",
 
+  "item.wardentools.echo_shrieker": "Echo Shrieker",
+  "item.wardentools.shrieker_fang": "Shrieker Fang",
+
   "block.wardentools.sculkhyst_block": "スカルクジストブロック",
   "block.wardentools.budding_sculkhyst": "芽生えたスカルクジスト",
   "block.wardentools.sculkhyst_cluster": "スカルクジストの塊",
@@ -24,9 +29,15 @@
   "block.wardentools.medium_sculkhyst_bud": "中くらいのスカルクジストの芽",
   "block.wardentools.small_sculkhyst_bud": "小さなスカルクジストの芽",
 
-  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "残響インゴットを置いてください",
+  "item.minecraft.smithing_template.warden_upgrade.additions_slot_description": "Sculk Shellを置いてください",
   "item.minecraft.smithing_template.warden_upgrade.applies_to": "ネザライトの装備品",
   "item.minecraft.smithing_template.warden_upgrade.base_slot_description": "ネザライト製の防具、武器、道具を置いてください",
-  "item.minecraft.smithing_template.warden_upgrade.ingredients": "残響インゴット",
-  "upgrade.minecraft.warden_upgrade": "ウォーデン強化"
+  "item.minecraft.smithing_template.warden_upgrade.ingredients": "Sculk Shell",
+  "upgrade.minecraft.warden_upgrade": "ウォーデン強化",
+
+  "effect.wardentools.warden_slayer": "Warden slayer",
+  "item.minecraft.potion.effect.warden_slayer": "Warden Slayer Potion",
+  "item.minecraft.splash_potion.effect.warden_slayer": "Splash Potion of the Warden Slayer",
+  "item.minecraft.lingering_potion.effect.warden_slayer": "Lingering Potion of the Warden Slayer",
+  "item.minecraft.tipped_arrow.effect.warden_slayer": "Arrow of the Warden Slayer"
 }
