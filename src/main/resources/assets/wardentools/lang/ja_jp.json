@@ -4,6 +4,8 @@
   "item.wardentools.warden_soul": "ウォーデンの魂",
   "item.wardentools.echo_apple": "残響のリンゴ",
   "item.wardentools.sculk_shell": "Sculk Shell",
+  "item.wardentools.echo_ingot": "残響インゴット",
+
 
   "item.wardentools.warden_helmet": "ウォーデンのヘルメット",
   "item.wardentools.warden_chestplate": "ウォーデンのチェストプレート",
@@ -16,6 +18,7 @@
   "item.wardentools.warden_shovel": "ウォーデンのシャベル",
   "item.wardentools.warden_hoe": "ウォーデンのクワ",
   "item.wardentools.echo_staff": "残響の杖",
+
   "item.wardentools.echo_shrieker": "Echo Shrieker",
   "item.wardentools.shrieker_fang": "Shrieker Fang",
 
